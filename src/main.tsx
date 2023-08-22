@@ -7,16 +7,28 @@ import {
 } from "react-router-dom";
 
 import './main.css'
-import HomePage from './view/pages/HomePage';
+
 import AuthProvider from './providers/AuthProvider';
+
+import HomePage from './view/pages/HomePage';
+import WelcomePage from './view/pages/WelcomePage';
+import LoginPage from './view/pages/LoginPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <AuthProvider>
+    element: <WelcomePage />,
+    errorElement: <h1>Erro</h1>
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+  {
+    path: "/home",
+    element: <AuthProvider noAuthRedirect='/'>
       <HomePage />
     </AuthProvider>,
-    errorElement: <div>error</div>
   },
 ]);
 

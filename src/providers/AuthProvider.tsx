@@ -1,7 +1,9 @@
 import AuthController from "../controllers/auth_controller";
-import CookieData from "../data/cookie_data";
+import CookieData from "../data/local/cookie_data";
+import { Navigate } from "react-router-dom";
 
 type AuthProviderProps = {
+  noAuthRedirect: string;
   children: React.ReactNode;
 }
 
@@ -11,8 +13,8 @@ export default function AuthProvider(props: AuthProviderProps) {
   const auth = authController.authSession();
 
   if (auth) {
-    return props.children
+    return props.children;
   }
 
-  return <h1>...</h1>
+  return <Navigate to={props.noAuthRedirect} />
 }
