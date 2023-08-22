@@ -1,4 +1,4 @@
-import LocalStorage from "../data/local_storage";
+import LocalStorage from "../data/local/local_storage";
 import AuthRules from "../rules/auth_rules";
 
 export default class AuthController implements AuthRules {

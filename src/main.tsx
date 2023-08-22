@@ -26,9 +26,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/home",
-    element: <AuthProvider noAuthRedirect='/'>
-      <HomePage />
-    </AuthProvider>,
+    element: <HomePage />,
   },
 ]);
 
