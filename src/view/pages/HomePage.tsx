@@ -3,6 +3,7 @@ import getAllPosts from "../../controllers/posts";
 import PostinSvg from "../components/svgs/PostinSvg";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import PostComponent from "../components/PostComponent";
+import PostCreateFormComponent from "../components/PostCreateFormComponent";
 
 export default function HomePage() {
   let items = getAllPosts();
@@ -45,7 +46,7 @@ export default function HomePage() {
     <div style={{ display: hiddenCreatePost ? '' : 'none' }}
       className="fixed bottom-0 w-full h-[400px] max-w-[600px] p-[10px] backdrop-blur-3xl right-0 rounded-tl-[40px] rounded-tr-[40px]">
       <section className="bg-gray-50 h-full justify-between flex flex-col w-full p-[10px] gap-[20px] rounded-[30px]">
-        
+        <PostCreateFormComponent />
         <div className="flex gap-[10px] justify-center items-center">
           <button type="submit" form="formPost" onClick={(event) => event.preventDefault()}
             className=" bg-gray-900 font-bold w-full text-white h-[50px] rounded-full hover:bg-gray-800 transition">
