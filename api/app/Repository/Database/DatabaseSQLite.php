@@ -4,15 +4,15 @@ namespace App\Repository\Database;
 
 use PDO;
 
-class DatabaseImpl implements IDatabase
+class DatabaseSQLite implements IDatabase
 {
   public static function connectDb(): PDO
   {
-    return new PDO('sqlite' . self::$dbPath . self::$dbName);
+    return new PDO('sqlite:' . self::$dbPath . self::$dbName);
   }
 
   private static string $dbPath = __DIR__;
-  private static string $dbName = '\\postin.sql';
+  private static string $dbName = '\\postin.sqlite';
 
   public static function createDb()
   {
@@ -33,7 +33,7 @@ class DatabaseImpl implements IDatabase
     $db = new PDO('sqlite:' . self::$dbPath . self::$dbName);
 
     $query = <<<QUERY
-      CREATE TABLE USER (
+      CREATE TABLE USERS (
         US_ID INTEGER PRIMARY KEY,
         US_USERNAME VARCHAR(100),
         US_PASSWORD VARCHAR(72),
@@ -72,8 +72,12 @@ class DatabaseImpl implements IDatabase
         PO_US_ID INTEGER,
         FOREIGN KEY (PO_US_ID) REFERENCES USER (US_ID)
       );
+
+      INSERT INTO USERS (US_USERNAME, US_PASSWORD, US_EMAIL) VALUES ('pedro', 'pedro', 'pedro');
     QUERY;
 
     $db->exec($query);
   }
+
+  // INSERT INTO USERS (US_USERNAME, US_PASSWORD, US_EMAIL) VALUES ('pedro', 'pedro', 'pedro');
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repository\Intefaces;
+namespace App\Repository\Interfaces;
 
 interface ISessionRepository
 {
-  public function createSession(): string;
-  public function deleteSession(): bool;
+  public function createSession(string $id): string;
+  public function deleteSession(string $id): bool;
 }
