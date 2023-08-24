@@ -1,4 +1,4 @@
-import PersonStorage from "../data/repository/person_storage";
+import PersonStorage from "../datasources/repository/person_storage";
 import LoginRules from "../rules/login_rules";
 
 export default class LoginController implements LoginRules {

@@ -1,5 +1,5 @@
 import AuthController from "../controllers/auth_controller";
-import CookieData from "../data/local/cookie_data";
+import CookieData from "../datasources/local/cookie_data";
 import { Navigate } from "react-router-dom";
 
 type AuthProviderProps = {
