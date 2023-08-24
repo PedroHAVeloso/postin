@@ -40,6 +40,8 @@ class UserRepository implements IPersonRepository
     $sessionRepo = new UserSessionRepository();
     $token = $sessionRepo->createSession($user::$email);
 
+    $token = 'pedro';
+
     return $token;
   }
 

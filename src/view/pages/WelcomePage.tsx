@@ -64,7 +64,7 @@ export default function WelcomePage() {
       </a>
       <a href="/" className="flex gap-[6px] items-center">
         <PostinSvg className="h-[30px] fill-gray-900 " />
-        <h1 className="font-bold">Post in</h1>
+        <h1 className="font-bold"><strong>Post</strong> in</h1>
       </a>
       <a href="/">
         <h1><strong>GNU</strong> | 2023</h1>

@@ -8,11 +8,13 @@ class DatabaseSQLite implements IDatabase
 {
   public static function connectDb(): PDO
   {
-    return new PDO('sqlite:' . self::$dbPath . self::$dbName);
+    $pdo = new PDO('sqlite:' . self::$dbPath . self::$dbName);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    return $pdo;
   }
 
   private static string $dbPath = __DIR__;
-  private static string $dbName = '\\postin.sqlite';
+  private static string $dbName = '\\postin.sqlite3';
 
   public static function createDb()
   {
