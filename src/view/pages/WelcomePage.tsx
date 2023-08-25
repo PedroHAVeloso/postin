@@ -19,23 +19,6 @@ export default function WelcomePage() {
     }
   }
 
-
-  function randomColor() {
-    let colors = [
-      '#FCF8A8',
-      '#D4FF9E',
-      '#FFC6C9',
-      '#FBE3FF',
-      '#E3EEFF',
-      '#FFE9F6',
-      '#FFFFFF',
-    ]
-
-    return colors[Math.floor(Math.random() * colors.length)];
-  }
-
-  let postColor = randomColor();
-
   return <>
     <main
       className="flex w-full h-fit md:h-screen flex-col md:flex-row gap-[20px]">
@@ -43,7 +26,7 @@ export default function WelcomePage() {
         className="flex w-full gap-[20px] flex-col justify-center items-center p-[10px] pt-[60px] pb-[60px] bg-[url(/back.png)] bg-cover transition duration-500 rounded-[20px]">
         <PostinSvg
           className="fill-gray-900 h-[150px] w-[150px] sm:h-[250px] sm:w-[250px] md:h-[300px] md:w-[300px]" />
-        <article className="p-[20px] rounded-[20px] flex flex-col gap-[10px]" style={{ backgroundColor: postColor }}>
+        <article className="p-[20px] rounded-[20px] flex flex-col gap-[10px] bg-white">
           <p className="sm:text-[1.1rem]">Moderno, fácil, rápido:<br /><strong>Post in</strong>, uma rede social <em>Unimar</em>.</p>
           <div className="flex justify-between items-center">
             <a href="/" className="rounded-full flex items-center justify-center bg-white p-[5px]">

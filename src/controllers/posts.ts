@@ -7,6 +7,7 @@ export default function getAllPosts() {
     '#FBE3FF',
     '#E3EEFF',
     '#FFE9F6',
+    '#FFFFFF',
   ]
 
   const randomColor = (colors: Array<string>) => {
