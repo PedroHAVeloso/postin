@@ -1,25 +1,60 @@
+import { useState } from "react";
 import InputComponent from "../components/InputComponent";
 import GoogleSvg from "../components/svgs/GoogleSvg";
 import PostinSvg from "../components/svgs/PostinSvg";
 import UnimarSvg from "../components/svgs/UnimarSvg";
+import HeartSvg from "../components/svgs/HeartSvg";
 
 export default function WelcomePage() {
+  let [isFavorite, setIsFavorite] = useState(false);
+  let [favorites, setFavorite] = useState(4021);
+
+  function onClickFavoriteButton() {
+    setIsFavorite(!isFavorite);
+
+    if (isFavorite) {
+      setFavorite(favorites - 1);
+    } else {
+      setFavorite(favorites + 1);
+    }
+  }
+
+
+  function randomColor() {
+    let colors = [
+      '#FCF8A8',
+      '#D4FF9E',
+      '#FFC6C9',
+      '#FBE3FF',
+      '#E3EEFF',
+      '#FFE9F6',
+      '#FFFFFF',
+    ]
+
+    return colors[Math.floor(Math.random() * colors.length)];
+  }
+
+  let postColor = randomColor();
+
   return <>
     <main
       className="flex w-full h-fit md:h-screen flex-col md:flex-row gap-[20px]">
       <article
-        className="flex w-full gap-[20px] flex-col justify-center items-center p-[10px] pt-[80px] pb-[60px] bg-gray-50 hover:bg-gray-100 transition duration-500 rounded-[20px]">
+        className="flex w-full gap-[20px] flex-col justify-center items-center p-[10px] pt-[60px] pb-[60px] bg-[url(/back.png)] bg-cover transition duration-500 rounded-[20px]">
         <PostinSvg
           className="fill-gray-900 h-[150px] w-[150px] sm:h-[250px] sm:w-[250px] md:h-[300px] md:w-[300px]" />
-        <ul
-          className="list-none sm:text-[1.2rem] text-gray-900">
-          <li><h1>Moderno, fácil, rápido:</h1></li>
-          <li><p><strong>Post in</strong>, uma rede social <em>Unimar</em>.</p></li>
-        </ul>
-        <a href="https://unimar.br/" className="absolute top-0 left-0 mt-[20px] ms-[20px] ">
-          <UnimarSvg
-            className="fill-gray-900 h-[30px]" />
-        </a>
+        <article className="p-[20px] rounded-[20px] flex flex-col gap-[10px]" style={{ backgroundColor: postColor }}>
+          <p className="sm:text-[1.1rem]">Moderno, fácil, rápido:<br /><strong>Post in</strong>, uma rede social <em>Unimar</em>.</p>
+          <div className="flex justify-between items-center">
+            <a href="/" className="rounded-full flex items-center justify-center bg-white p-[5px]">
+              <PostinSvg className="fill-gray-900 h-[25px] w-[25px]" />
+            </a>
+            <button type="button" className="flex gap-[6px] justify-center items-center" onClick={() => onClickFavoriteButton()}>
+              <HeartSvg filled={isFavorite} className="fill-gray-900 h-[20px]" />
+              <p>{favorites}</p>
+            </button>
+          </div>
+        </article >
       </article>
 
       <article
@@ -27,7 +62,7 @@ export default function WelcomePage() {
         <form action="/" method="POST"
           className="flex flex-col w-full justify-center items-center gap-[30px] max-w-[500px] sm:p-[40px] rounded-[40px]">
           <fieldset className="w-full flex items-center justify-center flex-col gap-[10px]">
-            <h1 className="text-[1.2rem] font-bold text-gray-900">Login</h1>
+            <h1 className="sm:text-[1.2rem] font-bold text-gray-900">Entre no Post in</h1>
             <InputComponent id="name"
               type="text"
               label="Nome"

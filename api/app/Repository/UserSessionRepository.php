@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use App\Repository\Database\DatabaseSQLite;
+use App\Repository\Database\DatabaseMySQL;
 use App\Repository\Interfaces\ISessionRepository;
 use App\Utils\GenerateStrings;
 
@@ -10,7 +10,7 @@ class UserSessionRepository implements ISessionRepository
 {
   public function createSession(string $email): string
   {
-    $db = new DatabaseSQLite();
+    $db = new DatabaseMySQL();
     $repo = new RepositoryController($db);
     $conn = $repo::connectDb();
 
@@ -30,6 +30,8 @@ class UserSessionRepository implements ISessionRepository
     $query->bindValue(':email', $email);
 
     $query->execute();
+
+    $conn = null;
 
     return $token;
   }

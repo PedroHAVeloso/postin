@@ -4,7 +4,7 @@ namespace App\Repository;
 
 use App\Models\PersonLoginModel;
 use App\Models\PersonRegisterModel;
-use App\Repository\Database\DatabaseSQLite;
+use App\Repository\Database\DatabaseMySQL;
 use App\Repository\Interfaces\IPersonRepository;
 use App\Repository\UserSessionRepository;
 use PDO;
@@ -13,7 +13,7 @@ class UserRepository implements IPersonRepository
 {
   public function login(PersonLoginModel $user)
   {
-    $db = new DatabaseSQLite();
+    $db = new DatabaseMySQL();
     $repo = new RepositoryController($db);
     $conn = $repo::connectDb();
 
@@ -40,14 +40,13 @@ class UserRepository implements IPersonRepository
     $sessionRepo = new UserSessionRepository();
     $token = $sessionRepo->createSession($user::$email);
 
-    $token = 'pedro';
 
     return $token;
   }
 
   public function register(PersonRegisterModel $user)
   {
-    $db = new DatabaseSQLite();
+    $db = new DatabaseMySQL();
     $repo = new RepositoryController($db);
     $conn = $repo::connectDb();
 

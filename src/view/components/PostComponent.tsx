@@ -5,6 +5,7 @@ type PostComponentProps = {
   color: string,
   text: string,
   favorites: number,
+  className?: string
 }
 
 export default function PostComponent(props: PostComponentProps) {
@@ -21,7 +22,8 @@ export default function PostComponent(props: PostComponentProps) {
     }
   }
 
-  return <article className="p-[20px] rounded-[20px] flex flex-col gap-[10px]" style={{ backgroundColor: props.color }}>
+  return <article className={props.className + " p-[20px] rounded-[20px] flex flex-col gap-[10px]"} style={{ backgroundColor: props.color }
+  }>
     <p>{props.text}</p>
     <div className="flex justify-between items-center">
       <a href="/">
@@ -32,5 +34,5 @@ export default function PostComponent(props: PostComponentProps) {
         <p>{favorites}</p>
       </button>
     </div>
-  </article>
+  </article >
 }
