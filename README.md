@@ -2,13 +2,9 @@
 <hr />
 
 <div align="center">
-  <img src="public/logo.svg" alt="Post in" height="100px" align="center"/>
-  <br />
-  <br />
-  <code><strong>Moderno, fácil, rápido.</strong></code>
+  <img src="public/back_logo.png" alt="Background" />
 </div>
 
-<img src="public/back.png" alt="Background" width="300px" height="100px"/>
 
 <hr />
 
