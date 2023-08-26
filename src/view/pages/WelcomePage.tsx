@@ -1,9 +1,9 @@
 import { useState } from "react";
-import InputComponent from "../components/InputComponent";
 import GoogleSvg from "../components/svgs/GoogleSvg";
 import PostinSvg from "../components/svgs/PostinSvg";
 import UnimarSvg from "../components/svgs/UnimarSvg";
 import HeartSvg from "../components/svgs/HeartSvg";
+import LoginFormComponent from "../components/LoginFormComponent";
 
 export default function WelcomePage() {
   let [isFavorite, setIsFavorite] = useState(false);
@@ -18,6 +18,7 @@ export default function WelcomePage() {
       setFavorite(favorites + 1);
     }
   }
+
 
   return <>
     <main
@@ -47,26 +48,8 @@ export default function WelcomePage() {
 
       <section
         className="flex w-full flex-col gap-[20px] p-[20px] justify-center items-center bg-gray-50 hover:bg-gray-100 transition duration-500 rounded-[20px]">
-        <form action="/" method="POST"
-          className="flex flex-col w-full justify-center items-center gap-[30px] max-w-[500px] sm:p-[40px] rounded-[40px]">
-          <fieldset className="w-full flex items-center justify-center flex-col gap-[10px]">
-            <h1 className="sm:text-[1.2rem] text-gray-900">Entre no <strong>Post</strong> in</h1>
-            <InputComponent id="name"
-              type="text"
-              label="Nome"
-              placeholder="Nome de usuário"
-              autoComplete="username" />
-            <InputComponent id="password"
-              type="password"
-              label="Senha"
-              placeholder="******"
-              autoComplete="current-password" />
-          </fieldset>
-          <button type="submit" onClick={(event) => event.preventDefault()}
-            className="bg-gray-900 max-w-[400px] w-full text-white h-[50px] rounded-full hover:bg-gray-800 transition">
-            Entrar
-          </button>
-        </form>
+
+        <LoginFormComponent />
 
         <p>Caso ainda não tenha uma conta:</p>
         <button type="button"

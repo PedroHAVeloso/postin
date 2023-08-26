@@ -41,7 +41,7 @@ export default function MePage() {
       </section>
 
       <section className="w-full bg-gray-50 rounded-[30px] p-[10px] overflow-auto gap-[10px] flex flex-col">
-        <h1 className="text-center text-[1.2rem] font-bold">Seu mural 👋</h1>
+        <h1 className="text-center text-[1.2rem]">Seu mural 👋</h1>
         <ResponsiveMasonry
           columnsCountBreakPoints={{ 0: 1, 600: 1, 1000: 2, 1300: 3, 1600: 4, 2000: 5 }}
         >

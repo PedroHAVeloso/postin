@@ -11,6 +11,7 @@ import './main.css'
 import HomePage from './view/pages/HomePage';
 import WelcomePage from './view/pages/WelcomePage';
 import MePage from './view/pages/MePage';
+import AuthProvider from './providers/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -20,11 +21,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/home",
-    element: <HomePage />,
+    element: <AuthProvider noAuthRedirect='/'>
+      <HomePage />
+    </AuthProvider>,
   },
   {
     path: "me",
-    element: <MePage />
+    element: <AuthProvider noAuthRedirect='/'>
+      <MePage />
+    </AuthProvider>,
   }
 ]);
 

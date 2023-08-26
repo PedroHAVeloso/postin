@@ -2,10 +2,10 @@ import UserLoginModel from "../models/user_login_model";
 import PersonStorage from "./person_storage";
 
 export default class UserRepository implements PersonStorage {
-  private url = 'http://localhost:1111/user/';
+  private url = 'http://localhost:9999/user/';
 
   public login(user: UserLoginModel): false | any {
-    fetch(this.url, {
+    fetch(this.url + 'login', {
       method: "POST",
       body: JSON.stringify({
         email: user.email,
