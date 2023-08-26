@@ -1,5 +1,6 @@
 import { useState } from "react";
 import HeartSvg from "./svgs/HeartSvg";
+import ProfilePictureComponent from "./ProfilePictureComponent";
 
 type PostComponentProps = {
   color: string,
@@ -26,9 +27,16 @@ export default function PostComponent(props: PostComponentProps) {
   }>
     <p>{props.text}</p>
     <div className="flex justify-between items-center">
-      <a href="/">
-        <img className="w-[30px] h-[30px] rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXNspavEPevYsqcUhundNhbcG39bnVuUrUw&usqp=CAU" alt="" />
-      </a>
+      <div className="flex justify-between items-center gap-[6px]">
+        <ProfilePictureComponent
+          href="/home"
+          size={30}
+          pictureUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXNspavEPevYsqcUhundNhbcG39bnVuUrUw&usqp=CAU">
+          <p className="text-[0.95rem] font-light">@FinnUnter</p>
+        </ProfilePictureComponent>
+      </div>
+
+
       <button type="button" onClick={() => onClickFavoriteButton()} className="flex gap-[6px] justify-center items-center">
         <HeartSvg filled={isFavorite} className="fill-gray-900 h-[20px]" />
         <p>{favorites}</p>

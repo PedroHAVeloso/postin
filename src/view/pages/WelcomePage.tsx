@@ -22,30 +22,35 @@ export default function WelcomePage() {
   return <>
     <main
       className="flex w-full h-fit md:h-screen flex-col md:flex-row gap-[20px]">
-      <article
-        className="flex w-full gap-[20px] flex-col justify-center items-center p-[10px] pt-[60px] pb-[60px] bg-[url(/back.png)] bg-cover transition duration-500 rounded-[20px]">
+
+      <section
+        className="flex w-full gap-[40px] flex-col justify-center items-center p-[10px] pt-[60px] pb-[60px] bg-[url(/back.png)] bg-cover rounded-[20px]">
         <PostinSvg
           className="fill-gray-900 h-[150px] w-[150px] sm:h-[250px] sm:w-[250px] md:h-[300px] md:w-[300px]" />
+
+        {/* Post: */}
         <article className="p-[20px] rounded-[20px] flex flex-col gap-[10px] bg-white">
-          <p className="sm:text-[1.1rem]">Moderno, fácil, rápido:<br /><strong>Post in</strong>, uma rede social <em>Unimar</em>.</p>
+          <p className="sm:text-[1.1rem]">Moderno, fácil, rápido:<br /><strong>Post</strong> in, uma rede social <em>Unimar</em>.</p>
           <div className="flex justify-between items-center">
-            <a href="/" className="rounded-full flex items-center justify-center bg-white p-[5px]">
+            <a href="/" className="rounded-full flex items-center justify-center gap-[6px] bg-white p-[5px]">
               <PostinSvg className="fill-gray-900 h-[25px] w-[25px]" />
+              <p className="text-[0.95rem] font-light">@Postin</p>
             </a>
             <button type="button" className="flex gap-[6px] justify-center items-center" onClick={() => onClickFavoriteButton()}>
               <HeartSvg filled={isFavorite} className="fill-gray-900 h-[20px]" />
               <p>{favorites}</p>
             </button>
           </div>
-        </article >
-      </article>
+        </article>
 
-      <article
+      </section>
+
+      <section
         className="flex w-full flex-col gap-[20px] p-[20px] justify-center items-center bg-gray-50 hover:bg-gray-100 transition duration-500 rounded-[20px]">
         <form action="/" method="POST"
           className="flex flex-col w-full justify-center items-center gap-[30px] max-w-[500px] sm:p-[40px] rounded-[40px]">
           <fieldset className="w-full flex items-center justify-center flex-col gap-[10px]">
-            <h1 className="sm:text-[1.2rem] font-bold text-gray-900">Entre no Post in</h1>
+            <h1 className="sm:text-[1.2rem] text-gray-900">Entre no <strong>Post</strong> in</h1>
             <InputComponent id="name"
               type="text"
               label="Nome"
@@ -74,8 +79,9 @@ export default function WelcomePage() {
           <GoogleSvg
             className="h-[40px] w-[40px]" />
         </div>
-      </article>
+      </section>
     </main>
+
     <footer className="h-[60px] mt-[20px] gap-[20px] flex hover:bg-gray-100 justify-center sm:justify-end p-[10px] items-center rounded-[20px] transition w-full bg-gray-50">
       <a href="https://unimar.br/">
         <UnimarSvg className="fill-gray-900 h-[25px]" />

@@ -1,4 +1,14 @@
-<span style="display: flex; gap: 20px">
-   <img src="public/logo.svg" alt="Logo" height="40px" width="40px"/>
-   <h1>Postin, uma rede Unimar.</h1>
-</span>
+# **Post** in, uma rede *Unimar*.
+<hr />
+
+<div align="center">
+  <img src="public/logo.svg" alt="Post in" height="100px" align="center"/>
+  <br />
+  <br />
+  <code><strong>Moderno, fácil, rápido.</strong></code>
+</div>
+
+<hr />
+
+#
+

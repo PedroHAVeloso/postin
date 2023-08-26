@@ -20,7 +20,7 @@ export default function HomePage() {
         {items.map((item) => {
           return (
             <PostComponent key={item.id} color={item.color} text={item.text} favorites={item.favorites} />
-          )
+          );
         })}
       </Masonry>
     </ResponsiveMasonry>
