@@ -1,7 +1,6 @@
 import LocalStorage from "../datasources/local/local_storage";
-import AuthRules from "../rules/auth_rules";
 
-export default class AuthController implements AuthRules {
+export default class AuthController{
   constructor(localStorage: LocalStorage) {
     this.localStorage = localStorage;
   }

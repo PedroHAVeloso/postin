@@ -1,9 +1,8 @@
 import CookieData from "../datasources/local/cookie_data";
 import PersonLoginModel from "../datasources/models/person_login_model";
 import PersonStorage from "../datasources/repository/person_storage";
-import LoginRules from "../rules/login_rules";
 
-export default class LoginController implements LoginRules {
+export default class LoginController  {
   constructor(personStorage: PersonStorage, personModel: PersonLoginModel) {
     this.personStorage = personStorage;
     this.email = personModel.email;
