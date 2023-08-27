@@ -38,7 +38,10 @@ export default function PostComponent(props: PostComponentProps) {
 
 
       <button type="button" onClick={() => onClickFavoriteButton()} className="flex gap-[6px] justify-center items-center">
-        <HeartSvg filled={isFavorite} className="fill-gray-900 h-[20px]" />
+        <HeartSvg filled={isFavorite} className={isFavorite ? "fill-red-600 h-[20px]" : "fill-gray-900 h-[20px]"} />
+        {/* <p className="text-[1.4rem]">
+          {isFavorite ? '❤️' : '🤍'}
+        </p> */}
         <p>{favorites}</p>
       </button>
     </div>

@@ -8,7 +8,7 @@ export default class CookieData implements LocalStorage {
   }
 
   public set(name: string, value: any): void {
-    const [, _setCookie,] = useCookies();
+    const [, _setCookie,] = useCookies([name]);
 
     _setCookie(name, value);
   }

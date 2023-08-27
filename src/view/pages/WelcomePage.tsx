@@ -19,13 +19,12 @@ export default function WelcomePage() {
     }
   }
 
-
   return <>
     <main
       className="flex w-full h-fit md:h-screen flex-col md:flex-row gap-[20px]">
 
       <section
-        className="flex w-full gap-[40px] flex-col justify-center items-center p-[10px] pt-[60px] pb-[60px] bg-[url(/back.png)] bg-cover rounded-[20px]">
+        className="flex w-full gap-[40px] flex-col justify-center items-center p-[10px] pt-[60px] pb-[60px] bg-[url(/back.png)] bg-cover rounded-br-[20px] rounded-bl-[20px] md:rounded-none md:rounded-tr-[20px] md:rounded-br-[20px]">
         <PostinSvg
           className="fill-gray-900 h-[150px] w-[150px] sm:h-[250px] sm:w-[250px] md:h-[300px] md:w-[300px]" />
 
@@ -47,7 +46,7 @@ export default function WelcomePage() {
       </section>
 
       <section
-        className="flex w-full flex-col gap-[20px] p-[20px] justify-center items-center bg-gray-50 hover:bg-gray-100 transition duration-500 rounded-[20px]">
+        className="flex w-full flex-col gap-[20px] p-[20px] justify-center items-center bg-gray-50 hover:bg-gray-100 transition duration-500 rounded-[20px] md:rounded-none md:rounded-tl-[20px] md:rounded-bl-[20px]">
 
         <LoginFormComponent />
 

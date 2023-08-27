@@ -14,11 +14,11 @@ export default function LoginFormComponent() {
     setPassword(target.value);
   }
 
-  function formSubmit() {
-    
+  async function formSubmit(event: React.MouseEvent) {
+    event.preventDefault();
   }
 
-  return <form onSubmit={formSubmit}
+  return <form
     className="flex flex-col w-full justify-center items-center gap-[30px] max-w-[500px] sm:p-[40px] rounded-[40px]">
     <fieldset className="w-full flex items-center justify-center flex-col gap-[10px]">
       <h1 className="sm:text-[1.2rem] text-gray-900">Entre no <strong>Post</strong> in</h1>
@@ -39,7 +39,7 @@ export default function LoginFormComponent() {
         onChange={handlePassword}
         autoComplete="current-password" />
     </fieldset>
-    <button type="submit"
+    <button type="submit" onClick={formSubmit}
       className="bg-gray-900 max-w-[400px] w-full text-white h-[50px] rounded-full hover:bg-gray-800 transition">
       Entrar
     </button>

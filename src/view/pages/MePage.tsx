@@ -22,11 +22,11 @@ export default function MePage() {
 
         <div className="rounded-[20px] min-h-[50px] border-[2px] border-gray-400 w-full bg-gray-50 flex justify-between items-center">
           <div className="w-full flex justify-center items-center hover:bg-gray-100 rounded-tl-[20px] rounded-bl-[20px] h-[50px] transition duration-500">
-            <p><strong>213</strong> posts</p>
+            <p><strong>🗂️ 213</strong> posts</p>
           </div>
           <hr className="bg-gray-400 w-[4px] h-[50px]" />
           <div className="w-full flex justify-center items-center hover:bg-gray-100 rounded-tr-[20px] rounded-br-[20px] h-[50px] transition duration-500">
-            <p><strong>1021</strong> favoritos</p>
+            <p><strong>❤️ 1021</strong> favoritos</p>
           </div>
         </div>
 

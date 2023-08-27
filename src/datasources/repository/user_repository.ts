@@ -4,8 +4,8 @@ import PersonStorage from "./person_storage";
 export default class UserRepository implements PersonStorage {
   private url = 'http://localhost:9999/user/';
 
-  public login(user: UserLoginModel): false | any {
-    fetch(this.url + 'login', {
+  public async login(user: UserLoginModel) {
+    const data = await fetch(this.url + 'login', {
       method: "POST",
       body: JSON.stringify({
         email: user.email,
@@ -14,7 +14,7 @@ export default class UserRepository implements PersonStorage {
     })
       .then(function (response) {
         if (response.ok) {
-          return response.body;
+          return response.json();
         } else {
           console.log('Response error');
           return false;
@@ -25,7 +25,7 @@ export default class UserRepository implements PersonStorage {
         return false;
       });
 
-    return false;
+    return data;
   }
 
   public register(): false | [token: string] {

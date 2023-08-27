@@ -8,11 +8,7 @@
 
 <div align="end">
   <small>
-    Desenvolvido durante o 
-    <a href="https://oficial.unimar.br/eventos/bootcamp-jovem-programador/">
-      Bootcamp Jovem Programador 2023
-    </a>
-    .
+    Desenvolvido durante o <a href="https://oficial.unimar.br/eventos/bootcamp-jovem-programador/">Bootcamp Jovem Programador 2023</a>.
   </small>
 </div>
 

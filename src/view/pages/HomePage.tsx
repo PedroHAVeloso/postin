@@ -25,6 +25,7 @@ export default function HomePage() {
       </Masonry>
     </ResponsiveMasonry>
 
+
     <div
       style={{ display: !hiddenCreatePost ? '' : 'none' }}
       className="backdrop-blur-3xl rounded-tl-[30px] fixed bottom-0 right-0 max-w-[150px] w-full p-[10px]">
