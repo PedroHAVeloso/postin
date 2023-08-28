@@ -1,4 +1,4 @@
-# **Post** in, uma rede *Unimar*.
+# **Post** in, uma rede *Unimar*. 💙
 
 <hr />
 
@@ -8,7 +8,7 @@
 
 <div align="end">
   <small>
-    Desenvolvido durante o <a href="https://oficial.unimar.br/eventos/bootcamp-jovem-programador/">Bootcamp Jovem Programador 2023</a>.
+    Desenvolvido por <a href="https://github.com/pedrohaveloso">PedroHAVeloso</a> 💙 durante o <a href="https://oficial.unimar.br/eventos/bootcamp-jovem-programador/">Bootcamp Jovem Programador 2023</a>. 
   </small>
 </div>
 
@@ -21,11 +21,11 @@ O **Post** in foi criado para a [*Unimar* (Universidade de Marília)](https://un
 Baseado em papeis coloridos colocados em um mural, a base da rede vem embutida nessa ideia. Você cola seus posts, textos curtos e fundos chamativos, no mural da rede.
 Todos poderão ver. Expresse suas emoções, sentimentos e opiniões.
 
-# Diário do desenvolvedor.
+# ✍️ Diário do desenvolvedor.
 
 Esse diário, escrito durante o desenvolvimento da ideia e do projeto no Bootcamp, descreve um pouco do processo de criação. Dia após dia.
 
-Se trata de um texto mais pessoal, um plano de fundo do desenvolvimento, com a minha visão, se relaciona menos ao projeto e mais ao desenvolvedor.
+Foco muito no meu aprendizado, já que eu não tinha nenhum conhecimento em React e TS/JS antes desse Bootcamp. Se trata de um texto mais pessoal, um plano de fundo do desenvolvimento.
 
 <details>
   <summary><code>21/08/2023</code> - Início do desenvolvimento.</summary>
