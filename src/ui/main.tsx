@@ -13,29 +13,38 @@ import WelcomePage from './pages/WelcomePage';
 import MePage from './pages/MePage';
 import ErrorPage from './pages/ErrorPage';
 import ProfilePage from './pages/ProfilePage';
+import AuthProvider from '../presenter/providers/AuthProvider';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:
-      <WelcomePage />,
+      <AuthProvider noAuthRedirect='/home' authNeed={false}>
+        <WelcomePage />
+      </AuthProvider>,
     errorElement:
       <ErrorPage />,
   },
   {
     path: "/home",
     element:
-      <HomePage />
+      <AuthProvider noAuthRedirect='/'>
+        <HomePage />
+      </AuthProvider>
   },
   {
     path: "me",
     element:
-      <MePage />
+      <AuthProvider noAuthRedirect='/'>
+        <MePage />
+      </AuthProvider>
   },
   {
     path: "profile/*",
     element:
-      <ProfilePage />
+      <AuthProvider noAuthRedirect='/'>
+        <ProfilePage />
+      </AuthProvider>
   }
 ]);
 

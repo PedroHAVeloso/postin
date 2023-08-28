@@ -1,9 +1,17 @@
 import { useState } from "react";
+import UserPresenter from "../../presenter/user_presenter";
+import UserLoginModel from "../../data/models/user_login_model";
+import { useNavigate } from "react-router-dom";
 
 /**
  * `Formulário para entrada de usuários.`
  */
 export default function LoginForm() {
+  const [isLoginError, setIsLoginError] = useState(false);
+  const onClickSetIsLoginError = (isError: boolean) => {
+    setIsLoginError(isError);
+  }
+
   const [email, setEmail] = useState('');
   const handleEmail = (event: React.ChangeEvent) => {
     const target = event.target as HTMLInputElement;
@@ -16,8 +24,23 @@ export default function LoginForm() {
     setPassword(target.value);
   }
 
-  const formSubmit = (event: React.MouseEvent) => {
+  const navigate = useNavigate();
+  const navigateToHome = () => {
+    navigate('/home')
+  };
+
+  const formSubmit = async (event: React.MouseEvent) => {
     event.preventDefault();
+    const userPresenter = new UserPresenter();
+    const login = await userPresenter.login(new UserLoginModel(email, password));
+
+    if (login) {
+      navigateToHome();
+      return;
+    }
+
+    onClickSetIsLoginError(true);
+    return;
   }
 
   return <>
@@ -25,7 +48,12 @@ export default function LoginForm() {
       className="flex flex-col w-full justify-center items-center gap-[30px] max-w-[500px] sm:p-[40px] rounded-[40px]"
     >
       <fieldset className="w-full flex items-center justify-center flex-col gap-[10px]">
-        <h1 className="sm:text-[1.2rem] text-gray-900">Entre no <strong>Post</strong> in</h1>
+        {
+          isLoginError ?
+            <h1 className="sm:text-[1.2rem] text-red-900">⚠️ E-mail ou senha <strong>incorreto</strong>.</h1>
+            :
+            <h1 className="sm:text-[1.2rem] text-gray-900">Entre no <strong>Post</strong> in</h1>
+        }
 
         <label htmlFor="email"
           className="flex flex-col gap-[6px] w-full max-w-[400px]">

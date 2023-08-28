@@ -20,7 +20,7 @@ class UserController
       return ['login' => false];
     }
 
-    return ['login' => true, 'token' => $logged];
+    return ['login' => true, 'token' => $logged['token'], 'username' => $logged['username']];
   }
 
   public static function register($data)

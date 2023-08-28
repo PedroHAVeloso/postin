@@ -43,7 +43,7 @@ export default function Post(props: PostProps) {
           <a href={"/profile/" + username} className="flex gap-[6px] items-center justify-between text-[0.95rem] font-light">
             <img
               className="rounded-full h-[30px] w-[30px]"
-              src={'/' + username + '.png'}
+              src={'http://localhost:1111/public/pictures/' + username + '.png'}
               alt="Perfil"
             />
             @{username}

@@ -33,15 +33,16 @@ class UserRepository implements IPersonRepository
 
     $conn = null;
 
-    if ($query->fetchColumn() < 1) {
+    if ($query->rowCount() < 1) {
       return false;
     }
+
+    $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
     $sessionRepo = new UserSessionRepository();
     $token = $sessionRepo->createSession($user::$email);
 
-
-    return $token;
+    return ['token' => $token, 'username' => $result[0]['US_USERNAME']];
   }
 
   public function register(PersonRegisterModel $user)
