@@ -4,7 +4,7 @@ namespace App\Repository\Database;
 
 use PDO;
 
-interface IDatabase
+interface DatabaseInterface
 {
   public static function connectDb(): PDO;
 }
