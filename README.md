@@ -116,3 +116,25 @@ Se trata de um texto mais pessoal, um plano de fundo do desenvolvimento, com a m
 
   Amanhã também desejo dar uns retoques na arquitetura do projeto, ao menos no código atual, limpar toda a baboseira que criei em alguns momentos, refleti e percebi alguns códigos sujos criados. Na questão arquitetura, darei meu máximo, pois ainda não entendi como posso aplicar alguns conceitos que conheço no React.
 </details>
+
+<details>
+  <summary><code>27/08/2023</code> - Refatorações e Login.</summary>
+
+  ## Refatorações e Login.
+  Hoje foi um dia bem produtivo, refatorei completamente o código do site, refiz componentes, páginas etc.
+
+  Deixei todas as tags que vi semânticas, o máximo possível. Os novos componentes são mais úteis e não apenas me atrapalham por causa de seus props — os que eu havia criado anteriormente, como ainda tinha menos conhecimento, estavam criando mais dor de cabeça que tudo.
+
+  Também tentei "isolar" alguns estados denntro de componentes específicos, ainda não entendi totalmente o gereciamento de estado do React, mas achei interessante tentar isolar cada estado num componente e deixar todas as páginas limpas, sem nenhum estado global, faz sentido?
+
+  Resumidamente, o dia se baseou nisso, agora o projeto está bem mais limpo, também adicionei documentação nos componentes e páginas, ficando mais fácil o entendimento.
+
+  Após essa limpeza no código, comecei outra bagunça: a função de login.
+  Como já tenho boa parte do visual pronto, estou me concentrando nas partes funcionais, a parte de login foi aparentemente concluída. 
+  
+  Você já consegue logar e agora só pode acessar as páginas internas (sem ser a de boas-vindas) estando logado.
+
+  Porém, acredito que fiz muitas gambiarras para que a função de login faça seu papel (funcionar) — POGzão (Programação Orientada a Gambiarra) na veia, como diriam os bons programadores de PHP.
+
+  Quando aprender mais sobre TypeScript, JavaScript, React etc., pretendo melhorar essa função, mas, no momento, é o que tive a capacidade de fazer.
+</details>
