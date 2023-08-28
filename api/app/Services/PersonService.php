@@ -15,13 +15,31 @@ class PersonService
 
   private static IPersonRepository $repository;
 
-  public function login(PersonLoginModel $person)
+  public static function login(PersonLoginModel $person)
   {
-    return self::$repository->login($person);
+    $login = self::$repository->login($person);
+
+    if ($login == false) {
+      return ['login' => false];
+    }
+
+    return [
+      'login' => true,
+      'username' => $login['username'],
+      'token' => $login['token'],
+    ];
   }
 
-  public function register(PersonRegisterModel $person)
+  public static function register(PersonRegisterModel $person)
   {
-    return self::$repository->register($person);
+    $register =  self::$repository->register($person);
+
+    if ($register == false) {
+      return ['register' => false];
+    }
+
+    return [
+      'register' => true,
+    ];
   }
 }

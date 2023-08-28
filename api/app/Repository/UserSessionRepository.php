@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use App\Repository\Database\DatabaseMySQL;
+use App\Repository\Database\PostinDatabase;
 use App\Repository\Interfaces\ISessionRepository;
 use App\Utils\GenerateStrings;
 
@@ -10,7 +10,7 @@ class UserSessionRepository implements ISessionRepository
 {
   public function createSession(string $email): string
   {
-    $db = new DatabaseMySQL();
+    $db = new PostinDatabase();
     $repo = new RepositoryController($db);
     $conn = $repo::connectDb();
 

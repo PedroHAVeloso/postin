@@ -7,6 +7,6 @@ use App\Models\PersonRegisterModel;
 
 interface IPersonRepository
 {
-  public function login(PersonLoginModel $person);
-  public function register(PersonRegisterModel $person);
+  public function login(PersonLoginModel $person): array | false;
+  public function register(PersonRegisterModel $person): array | false;
 }

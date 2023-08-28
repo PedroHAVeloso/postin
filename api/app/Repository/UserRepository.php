@@ -4,16 +4,20 @@ namespace App\Repository;
 
 use App\Models\PersonLoginModel;
 use App\Models\PersonRegisterModel;
-use App\Repository\Database\DatabaseMySQL;
+use App\Repository\Database\PostinDatabase;
 use App\Repository\Interfaces\IPersonRepository;
 use App\Repository\UserSessionRepository;
 use PDO;
 
 class UserRepository implements IPersonRepository
 {
-  public function login(PersonLoginModel $user)
+  /**
+   * Retorna falso caso o login não seja realizado, ou um array
+   * com um token de acesso e username caso seja realizado.
+   */
+  public function login(PersonLoginModel $user): array | false
   {
-    $db = new DatabaseMySQL();
+    $db = new PostinDatabase();
     $repo = new RepositoryController($db);
     $conn = $repo::connectDb();
 
@@ -45,9 +49,9 @@ class UserRepository implements IPersonRepository
     return ['token' => $token, 'username' => $result[0]['US_USERNAME']];
   }
 
-  public function register(PersonRegisterModel $user)
+  public function register(PersonRegisterModel $user): array | false
   {
-    $db = new DatabaseMySQL();
+    $db = new PostinDatabase();
     $repo = new RepositoryController($db);
     $conn = $repo::connectDb();
 
@@ -67,7 +71,7 @@ class UserRepository implements IPersonRepository
 
     $query->execute();
 
-    unset($conn);
+    $conn = null;
 
     if ($query == false) {
       return false;
@@ -76,6 +80,6 @@ class UserRepository implements IPersonRepository
     $sessionRepo = new UserSessionRepository();
     $token = $sessionRepo->createSession($user::$email);
 
-    return $token;
+    return ['token' => $token];
   }
 }
