@@ -1,10 +1,10 @@
 # **Post** in, uma rede *Unimar*. 💙
 
-<hr />
-
 <div align="center">
   <img src="public/back_logo.png" alt="Background" />
 </div>
+
+---
 
 <div align="end">
   <small>
@@ -12,9 +12,7 @@
   </small>
 </div>
 
-<hr />
-
-#
+---
 
 O **Post** in foi criado para a [*Unimar* (Universidade de Marília)](https://unimar.br/), uma rede interna e, ao desejável, externa, com o objetivo de ser simples de uso, agradável visualmente e atrativo aos públicos.
 
