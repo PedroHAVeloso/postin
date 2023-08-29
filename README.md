@@ -1,7 +1,7 @@
 # **Post** in, uma rede *Unimar*. 💙
 
 <div align="center">
-  <img src="public/back_logo.png" alt="Background" />
+  <img src="public/desktop_back_logo.png" alt="Background" />
 </div>
 
 ---
