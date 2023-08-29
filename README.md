@@ -16,8 +16,26 @@
 
 O **Post** in foi criado para a [*Unimar* (Universidade de Marília)](https://unimar.br/), uma rede interna e, ao desejável, externa, com o objetivo de ser simples de uso, agradável visualmente e atrativo aos públicos.
 
-Baseado em papeis coloridos colocados em um mural, a base da rede vem embutida nessa ideia. Você cola seus posts, textos curtos e fundos chamativos, no mural da rede.
-Todos poderão ver. Expresse suas emoções, sentimentos e opiniões.
+Se baseia em papeis coloridos colados em um mural. Você cola seus posts — textos curtos e com fundos da cor que desejar — no mural da rede.
+
+Assim, todos poderão ver o que você escreveu, o que expressou.
+
+# 🗒️ Sumário
+
+- [Como rodar o projeto.](#💡-como-rodar-o-projeto)
+  - *Passo a passo para conseguir iniciar o projeto na sua máquina.*
+- [Como o projeto funciona?](#🤔-como-o-projeto-funciona)
+  - *Descrição e explicação do funcionamento completo do projeto.*
+- [Diário do desenvolvedor.](#✍️-diário-do-desenvolvedor)
+  - *Diário com o dia a dia do desenvolvimento do projeto no Bootcamp.* 
+
+# 💡 Como rodar o projeto.
+
+O projeto (React) usa a API em PHP (também nesse repositório) para funcionar. Entretando você não precisa rodar a API, pois consegui hospedar ela. Apenas rodar o projeto em React te dará acesso a rede.
+
+# 🤔 Como o projeto funciona?
+
+TODO
 
 # ✍️ Diário do desenvolvedor.
 
