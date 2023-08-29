@@ -46,7 +46,7 @@ export default class PostDatasource {
       return false;
     }
   }
-  
+
   public async getUserPosts(username: string) {
     try {
       const fetchData = await fetch(
@@ -62,6 +62,52 @@ export default class PostDatasource {
       if (json['get'] == true) {
         console.log('get')
         return json['posts'];
+      } else {
+        return false;
+      }
+    } catch (exc) {
+      return false;
+    }
+  }
+
+  public async favorite(id: number) {
+    try {
+      const fetchData = await fetch(
+        apiUrls.favorite, {
+        method: "POST",
+        body: JSON.stringify({
+          id: id
+        })
+      });
+
+      const json = await fetchData.json();
+
+      if (json['favorite'] == true) {
+        console.log('favorite')
+        return true;
+      } else {
+        return false;
+      }
+    } catch (exc) {
+      return false;
+    }
+  }
+
+  public async unfavorite(id: number) {
+    try {
+      const fetchData = await fetch(
+        apiUrls.unfavorite, {
+        method: "POST",
+        body: JSON.stringify({
+          id: id
+        })
+      });
+
+      const json = await fetchData.json();
+
+      if (json['unfavorite'] == true) {
+        console.log('unfavorite')
+        return true;
       } else {
         return false;
       }

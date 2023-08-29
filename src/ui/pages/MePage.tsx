@@ -35,6 +35,7 @@ export default function MePage() {
           </ul>
 
           <Post
+            id={1}
             color="#FFFFFF"
             text="Olá, esse é um post fixado 😁, ele também tem, no máximo, 200 caracteres, o que achou? Vem pro Post in também! Uma rede social Unimar, dela para o mundo. Descubra novidades, expresse emoções."
             favorites={21}

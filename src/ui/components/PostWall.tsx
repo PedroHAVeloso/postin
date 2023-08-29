@@ -41,6 +41,7 @@ export default function PostWall(props: PostWallProps) {
             return (
               <PostComponent
                 key={item.id}
+                id={item.id}
                 color={item.color}
                 text={item.text}
                 favorites={item.favorites}

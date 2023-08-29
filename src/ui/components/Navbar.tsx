@@ -34,6 +34,10 @@ export default function Navbar(props: NavbarProps) {
     navigate('/home');
   }
 
+  const navigateToLogoff = () => {
+    navigate('/logoff');
+  }
+
   return <>
     {/* Navbar */}
     <nav className="backdrop-blur-3xl fixed top-0 p-[10px] w-full flex items-center justify-center">
@@ -120,6 +124,7 @@ export default function Navbar(props: NavbarProps) {
         <li className="w-full bg-gray-100 hover:bg-red-100 rounded-[10px] flex justify-end items-center transition duration-500">
           <button
             type="button"
+            onClick={navigateToLogoff}
             className="flex items-center text-red-900  p-[10px] gap-[20px] w-full justify-between"
           >
             <p className="text-[1.2rem]">😭</p>

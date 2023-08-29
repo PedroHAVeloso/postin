@@ -24,6 +24,7 @@ export default function WelcomePage() {
         />
 
         <Post
+          id={1}
           color="#FFFFFF"
           text={'Moderno, fácil, rápido: \n Post in, uma rede social Unimar. 💙'}
           favorites={3125}

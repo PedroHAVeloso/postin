@@ -13,4 +13,44 @@ export default class PostRepository {
 
     return true;
   }
+
+  public async getAllPosts() {
+    const get = await postDatasource.getAllPosts();
+
+    if (get == false) {
+      return false;
+    }
+
+    return get;
+  }
+
+  public async getUserPosts(username: string) {
+    const get = await postDatasource.getUserPosts(username);
+
+    if (get == false) {
+      return false;
+    }
+
+    return get;
+  }
+
+  public async favorite(id: number) {
+    const favorite = await postDatasource.favorite(id);
+
+    if (favorite == false) {
+      return false;
+    }
+
+    return true;
+  }
+
+  public async unfavorite(id: number) {
+    const unfavorite = await postDatasource.unfavorite(id);
+
+    if (unfavorite == false) {
+      return false;
+    }
+
+    return true;
+  }
 }  

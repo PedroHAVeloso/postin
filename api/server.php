@@ -8,4 +8,8 @@ header('Access-Control-Allow-Origin: *');
 header("Access-Control-Allow-Headers: X-Requested-With");
 header('Content-Type: application/json');
 
-Routes::apiRoutes();
+try {
+  Routes::apiRoutes();
+} catch (Exception $exc) {
+  echo $exc;
+}

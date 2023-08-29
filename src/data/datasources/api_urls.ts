@@ -1,4 +1,4 @@
-const defaultUrl = 'http://localhost/api/'
+const defaultUrl = 'https://pedrohaveloso.site/api'
 
 const apiUrls = {
   default: defaultUrl,
@@ -7,6 +7,8 @@ const apiUrls = {
   postCreate: defaultUrl + 'post/create',
   getAllPosts: defaultUrl + 'post/get-all',
   getUserPosts: defaultUrl + 'post/get-user',
+  favorite: defaultUrl + 'post/favorite',
+  unfavorite: defaultUrl + 'post/unfavorite',
 }
 
 export default apiUrls; 

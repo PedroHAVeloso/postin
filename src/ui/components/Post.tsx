@@ -1,7 +1,10 @@
 import { useState } from "react";
 import HeartSvg from "../svgs/HeartSvg";
+import apiUrls from "../../data/datasources/api_urls";
+import PostPresenter from "../../presenter/post_presenter";
 
 type PostProps = {
+  id: number,
   color: string,
   text: string,
   favorites: number,
@@ -22,13 +25,17 @@ export default function Post(props: PostProps) {
   const [favorites, setFavorites] = useState(props.favorites);
 
   const onClickFavoriteButton = () => {
+    const postPresenter = new PostPresenter();
+
     if (isFavorite) {
       setFavorites(favorites - 1);
+      setIsFavorite(false);
+      postPresenter.unfavorite(props.id);
     } else {
       setFavorites(favorites + 1);
+      setIsFavorite(true);
+      postPresenter.favorite(props.id);
     }
-
-    setIsFavorite(!isFavorite);
   }
 
   return <>
@@ -43,7 +50,7 @@ export default function Post(props: PostProps) {
           <a href={"/profile/" + username} className="flex gap-[6px] items-center justify-between text-[0.95rem] font-light">
             <img
               className="rounded-full h-[30px] w-[30px]"
-              src={'/api/public/pictures/' + username + '.png'}
+              src={apiUrls.default + 'public/pictures/' + username + '.png'}
               alt="Perfil"
             />
             @{username}
