@@ -6,4 +6,5 @@ enum Methods: string
 {
   case get = 'GET';
   case post = 'POST';
+  case put = 'PUT';
 }

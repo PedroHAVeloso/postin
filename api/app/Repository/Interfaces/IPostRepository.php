@@ -7,9 +7,9 @@ use App\Models\PostCreateModel;
 interface IPostRepository
 {
   public function create(PostCreateModel $post): bool;
-  public function getAllPosts(): array | false;
-  public function getUserPosts(): array;
-  public function favorite(): bool;
-  public function unfavorite(): bool;
+  public function getAllPosts(): array|false;
+  public function getUserPosts(string $username): array|false;
+  public function favorite(int $id): bool;
+  public function unfavorite(int $id): bool;
   public function delete(): bool;
 }

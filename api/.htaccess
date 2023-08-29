@@ -1,4 +1,3 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)＄ server.php
-RewriteRule ^(public/*)$ public/
+RewriteRule ^(.*)$ server.php

@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Router;
+namespace App\Routes;
 
 use App\Utils\Methods;
 use App\Utils\RequestMethod;
 use App\Utils\RequestUri;
+use Closure;
 
 /**
  * Criação de rotas.
@@ -17,17 +18,22 @@ class Router
    * 
    * @param Methods $method
    * @param string $route
-   * @param function $function
+   * @param Closure $function
    * 
    * @return void
    */
-  public static function create(Methods $method, string $route, $function): void
+  public static function create(Methods $method, string $route, Closure $function): void
   {
-    $requestMethod =  RequestMethod::method();
+    $requestMethod = RequestMethod::method();
     $requestUri = RequestUri::uri();
 
-    if ($requestMethod != $method) return;
-    if ($requestUri != $route) return;
+    if ($requestMethod != $method->value) {
+      return;
+    }
+
+    if ($requestUri != $route) {
+      return;
+    }
 
     $function();
     return;

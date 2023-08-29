@@ -8,7 +8,7 @@ use App\Repository\Interfaces\IPostRepository;
 
 use PDO;
 
-class UserPostRepository extends RepositoryController implements IPostRepository
+class UserPostRepository implements IPostRepository
 {
   public function create(PostCreateModel $post): bool
   {
@@ -41,7 +41,7 @@ class UserPostRepository extends RepositoryController implements IPostRepository
     return true;
   }
 
-  public function getAllPosts(): array | false
+  public function getAllPosts(): array|false
   {
     $db = new PostinDatabase();
     $repo = new RepositoryController($db);
@@ -63,33 +63,75 @@ class UserPostRepository extends RepositoryController implements IPostRepository
     return $query->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  public function getUserPosts(): array
+  public function getUserPosts(string $username): array|false
   {
     $db = new PostinDatabase();
     $repo = new RepositoryController($db);
     $conn = $repo::connectDb();
 
+    $script = <<<QUERY
+      SELECT * FROM POSTS, USERS WHERE PO_US_ID = (SELECT US_ID FROM USERS WHERE US_USERNAME = :username)
+      AND US_ID = PO_US_ID;
+    QUERY;
+
+    $query = $conn->prepare($script);
+    $query->bindValue(':username', $username);
+    $query->execute();
+
     $conn = null;
-    return [];
+
+    if ($query == false) {
+      return false;
+    }
+
+    return $query->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  public function favorite(): bool
+  public function favorite(int $id): bool
   {
     $db = new PostinDatabase();
     $repo = new RepositoryController($db);
     $conn = $repo::connectDb();
 
+    $script = <<<QUERY
+      UPDATE POSTS SET PO_FAVORITES = PO_FAVORITES + 1 
+      WHERE PO_ID = :id;
+    QUERY;
+
+    $query = $conn->prepare($script);
+    $query->bindValue(':id', $id);
+    $query->execute();
+
     $conn = null;
+
+    if ($query == false) {
+      return false;
+    }
+
     return true;
   }
 
-  public function unfavorite(): bool
+  public function unfavorite(int $id): bool
   {
     $db = new PostinDatabase();
     $repo = new RepositoryController($db);
     $conn = $repo::connectDb();
 
+    $script = <<<QUERY
+      UPDATE POSTS SET PO_FAVORITES = PO_FAVORITES - 1 
+      WHERE PO_ID = :id;
+    QUERY;
+
+    $query = $conn->prepare($script);
+    $query->bindValue(':id', $id);
+    $query->execute();
+
     $conn = null;
+
+    if ($query == false) {
+      return false;
+    }
+
     return true;
   }
 

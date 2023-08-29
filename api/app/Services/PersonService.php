@@ -32,7 +32,7 @@ class PersonService
 
   public static function register(PersonRegisterModel $person)
   {
-    $register =  self::$repository->register($person);
+    $register = self::$repository->register($person);
 
     if ($register == false) {
       return ['register' => false];
@@ -40,6 +40,7 @@ class PersonService
 
     return [
       'register' => true,
+      'token' => $register['token'],
     ];
   }
 }

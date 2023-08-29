@@ -6,10 +6,10 @@ use PDO;
 
 class PostinDatabase implements DatabaseInterface
 {
-  private static string $dbHost = 'pedrohaveloso.site';
-  private static string $dbName = 'u399096293_postin';
-  private static string $username = 'u399096293_postin';
-  private static string $password = 'Postin123';
+  private static string $dbHost = 'localhost';
+  private static string $dbName = 'postin';
+  private static string $username = 'root';
+  private static string $password = 'root';
 
   public static function connectDb(): PDO
   {
