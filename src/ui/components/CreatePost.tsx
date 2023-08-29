@@ -1,4 +1,7 @@
 import { useState } from "react";
+import PostPresenter from "../../presenter/post_presenter";
+import PostCreateModel from "../../data/models/post_create_model";
+import { useNavigate } from "react-router-dom";
 
 /** 
  * `Formulário para a criação de um post.`
@@ -12,12 +15,40 @@ export default function CreatePost() {
   const [postColor, setPostColor] = useState("");
   const [hiddenCreatePost, setHiddenCreatePost] = useState(false);
 
+  const navigate = useNavigate();
+  const navigateToHome = () => {
+    navigate('/home');
+  }
+
+  const [postText, setPostText] = useState("");
+  const handlePostText = (event: React.ChangeEvent) => {
+    const target = event.target as HTMLInputElement;
+    setPostText(target.value);
+  }
+
   const onClickHiddenCreatePost = () => {
     setHiddenCreatePost(!hiddenCreatePost);
   }
 
   const onClickInputColor = (color: string) => {
     setPostColor(color);
+  }
+
+  const formSubmit = async (event: React.MouseEvent) => {
+    event.preventDefault();
+    const postPresenter = new PostPresenter();
+    const create = await postPresenter.create(new PostCreateModel(
+      postText,
+      '',
+      postColor,
+    ));
+
+    if (create) {
+      navigateToHome();
+      return;
+    }
+
+    return;
   }
 
   return <>
@@ -55,12 +86,14 @@ export default function CreatePost() {
             required maxLength={200} name="post" id="post"
             placeholder="Escreva aqui seu post."
             style={{ backgroundColor: postColor }}
+            value={postText}
+            onChange={handlePostText}
             className="resize-none w-full h-full rounded-[20px] p-[20px]"
           />
 
           <fieldset className="flex flex-col h-full justify-between">
             <input
-              onClick={() => onClickInputColor("FFFFFF")}
+              onClick={() => onClickInputColor("#FFFFFF")}
               type="radio" name="postColor" id="postColor" value="#FFFFFF" required
               className="h-[30px] w-[30px] bg-[#FFFFFF] appearance-none rounded-full checked:border-[2px] checked:border-gray-900"
             />
@@ -100,7 +133,7 @@ export default function CreatePost() {
 
         <menu className="flex gap-[10px] justify-center items-center">
           <li className="w-full h-fit flex">
-            <button type="submit" form="formPost"
+            <button type="submit" form="formPost" onClick={formSubmit}
               className=" bg-gray-900 font-bold w-full text-white h-[50px] rounded-full hover:bg-gray-800 duration-500 transition">
               Postar
             </button>
