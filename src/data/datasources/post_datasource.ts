@@ -27,4 +27,46 @@ export default class PostDatasource {
       return false;
     }
   }
+
+  public async getAllPosts() {
+    try {
+      const fetchData = await fetch(
+        apiUrls.getAllPosts,
+      );
+
+      const json = await fetchData.json();
+
+      if (json['get'] == true) {
+        console.log('get')
+        return json['posts'];
+      } else {
+        return false;
+      }
+    } catch (exc) {
+      return false;
+    }
+  }
+  
+  public async getUserPosts(username: string) {
+    try {
+      const fetchData = await fetch(
+        apiUrls.getUserPosts, {
+        method: "POST",
+        body: JSON.stringify({
+          username: username
+        })
+      });
+
+      const json = await fetchData.json();
+
+      if (json['get'] == true) {
+        console.log('get')
+        return json['posts'];
+      } else {
+        return false;
+      }
+    } catch (exc) {
+      return false;
+    }
+  }
 }

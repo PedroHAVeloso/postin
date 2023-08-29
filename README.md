@@ -136,3 +136,14 @@ Foco muito no meu aprendizado, já que eu não tinha nenhum conhecimento em Reac
 
   Quando aprender mais sobre TypeScript, JavaScript, React etc., pretendo melhorar essa função, mas, no momento, é o que tive a capacidade de fazer.
 </details>
+
+<details>
+  <summary><code>28/08/2023</code> - API e mais funções.</summary>
+
+  ## API e mais funções.
+  O dia hoje foi focado em desenvolver mais funções na API, pra amanhã implantar elas no frontend (React) e transformar o projeto em funcional.
+
+  Terminei as funções para cadastro e login de usuário, além das funções básicas envolvendo posts, como criar, favoritar, desfavoritar, obter todos etc.
+
+  Já amanhã, pretendo continuar no React para aplicar essas funções (criar a comunicação com a API).
+</details>

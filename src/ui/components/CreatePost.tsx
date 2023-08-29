@@ -16,8 +16,8 @@ export default function CreatePost() {
   const [hiddenCreatePost, setHiddenCreatePost] = useState(false);
 
   const navigate = useNavigate();
-  const navigateToHome = () => {
-    navigate('/home');
+  const refreshPage = () => {
+    navigate(0);
   }
 
   const [postText, setPostText] = useState("");
@@ -44,7 +44,7 @@ export default function CreatePost() {
     ));
 
     if (create) {
-      navigateToHome();
+      refreshPage();
       return;
     }
 

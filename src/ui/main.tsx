@@ -14,6 +14,7 @@ import MePage from './pages/MePage';
 import ErrorPage from './pages/ErrorPage';
 import ProfilePage from './pages/ProfilePage';
 import AuthProvider from '../presenter/providers/AuthProvider';
+import LogoffPage from './pages/LogoffPage';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,13 @@ const router = createBrowserRouter([
       </AuthProvider>,
     errorElement:
       <ErrorPage />,
+  },
+  {
+    path: '/logoff',
+    element:
+      // <AuthProvider noAuthRedirect='/'>
+      <LogoffPage />,
+    // </AuthProvider>
   },
   {
     path: "/home",
