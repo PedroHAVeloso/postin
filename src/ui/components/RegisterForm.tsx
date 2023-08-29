@@ -1,7 +1,7 @@
 import { useState } from "react";
 import UserPresenter from "../../presenter/user_presenter";
-import UserLoginModel from "../../data/models/user_login_model";
 import { useNavigate } from "react-router-dom";
+import UserRegisterModel from "../../data/models/user_register_model";
 
 /**
  * `Formulário para cadastro de usuários.`
@@ -35,13 +35,12 @@ export default function RegisterForm() {
     navigate('/home')
   };
 
-  //TODO
   const formSubmit = async (event: React.MouseEvent) => {
     event.preventDefault();
     const userPresenter = new UserPresenter();
-    const login = await userPresenter.login(new UserLoginModel(email, password));
+    const register = await userPresenter.register(new UserRegisterModel(email, password, username));
 
-    if (login) {
+    if (register) {
       navigateToHome();
       return;
     }

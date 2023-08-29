@@ -47,6 +47,8 @@ export default class PostPresenter {
       });
     });
 
+    console.log(newPosts);
+
     return newPosts;
   }
 

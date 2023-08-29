@@ -1,6 +1,8 @@
 import { useState } from "react";
 import PostinSvg from "../svgs/PostinSvg";
 import { useNavigate } from "react-router-dom";
+import apiUrls from "../../data/datasources/api_urls";
+import Cookies from "js-cookie";
 
 type NavbarProps = {
   page?: string,
@@ -18,6 +20,7 @@ type NavbarProps = {
  * opções. 
  */
 export default function Navbar(props: NavbarProps) {
+  const username = Cookies.get('auth-username');
 
   const [openFloatingMenu, setOpenFloatingMenu] = useState(false);
   const onClickOpenCloseFloatingMenu = () => {
@@ -61,8 +64,12 @@ export default function Navbar(props: NavbarProps) {
         <li className="flex">
           <button type="button" onClick={onClickOpenCloseFloatingMenu}>
             <img className="rounded-full w-[35px] h-[35px]"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiXNspavEPevYsqcUhundNhbcG39bnVuUrUw&usqp=CAU"
+              src={apiUrls.default + 'public/pictures/' + username + '.png'}
               alt="Picture"
+              onError={({ currentTarget }) => {
+                currentTarget.onerror = null;
+                currentTarget.src = apiUrls.default + 'public/pictures/user.png';
+              }}
             />
           </button>
         </li>

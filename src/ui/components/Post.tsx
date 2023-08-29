@@ -51,7 +51,10 @@ export default function Post(props: PostProps) {
             <img
               className="rounded-full h-[30px] w-[30px]"
               src={apiUrls.default + 'public/pictures/' + username + '.png'}
-              alt="Perfil"
+              onError={({ currentTarget }) => {
+                currentTarget.onerror = null;
+                currentTarget.src = apiUrls.default + 'public/pictures/user.png';
+              }}
             />
             @{username}
           </a>

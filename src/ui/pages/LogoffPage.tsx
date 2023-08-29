@@ -3,7 +3,7 @@ import PostinSvg from "../svgs/PostinSvg";
 import Cookies from "js-cookie";
 
 /**
- * Página para desconectar usuários.
+ * `Página para desconectar usuários.`
  */
 export default function LogoffPage() {
   const navigate = useNavigate();

@@ -29,30 +29,30 @@ const router = createBrowserRouter([
   {
     path: '/logoff',
     element:
-      // <AuthProvider noAuthRedirect='/'>
-      <LogoffPage />,
-    // </AuthProvider>
+      <AuthProvider noAuthRedirect='/'>
+        <LogoffPage />,
+      </AuthProvider>
   },
   {
     path: "/home",
     element:
-      // <AuthProvider noAuthRedirect='/'>
-      <HomePage />
-    // </AuthProvider>
+      <AuthProvider noAuthRedirect='/'>
+        <HomePage />
+      </AuthProvider>
   },
   {
     path: "me",
     element:
-      // <AuthProvider noAuthRedirect='/'>
-      <MePage />
-    // </AuthProvider>
+      <AuthProvider noAuthRedirect='/'>
+        <MePage />
+      </AuthProvider>
   },
   {
     path: "profile/*",
     element:
-      // <AuthProvider noAuthRedirect='/'>
-      <ProfilePage />
-    // </AuthProvider>
+      <AuthProvider noAuthRedirect='/'>
+        <ProfilePage />
+      </AuthProvider>
   }
 ]);
 

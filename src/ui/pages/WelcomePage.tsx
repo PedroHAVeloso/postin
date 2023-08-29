@@ -48,9 +48,6 @@ export default function WelcomePage() {
         <PostinSvg className="h-[30px] fill-gray-900 " />
         <h1 className="font-bold"><strong>Post</strong> in</h1>
       </a>
-      <a href="/">
-        <h1><strong>GNU</strong> | 2023</h1>
-      </a>
     </footer>
   </>
 }
@@ -60,7 +57,6 @@ function LoginRegisterSection() {
   const onClickRegisterView = () => {
     setRegisterView(!registerView);
   }
-
 
   if (registerView)
     return <>
@@ -74,7 +70,6 @@ function LoginRegisterSection() {
         Entre
       </button>
     </>
-
 
   return <>
     <LoginForm />

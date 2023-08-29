@@ -1,4 +1,4 @@
-const defaultUrl = 'https://pedrohaveloso.site/api'
+const defaultUrl = 'https://www.pedrohaveloso.site/api/'
 
 const apiUrls = {
   default: defaultUrl,

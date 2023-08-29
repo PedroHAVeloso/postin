@@ -74,7 +74,7 @@ export default class PostDatasource {
     try {
       const fetchData = await fetch(
         apiUrls.favorite, {
-        method: "POST",
+        method: "PUT",
         body: JSON.stringify({
           id: id
         })
@@ -97,7 +97,7 @@ export default class PostDatasource {
     try {
       const fetchData = await fetch(
         apiUrls.unfavorite, {
-        method: "POST",
+        method: "PUT",
         body: JSON.stringify({
           id: id
         })

@@ -48,7 +48,7 @@ class UserPostRepository implements IPostRepository
     $conn = $repo::connectDb();
 
     $script = <<<QUERY
-      SELECT * FROM POSTS, USERS WHERE PO_US_ID = US_ID;
+      SELECT * FROM POSTS, USERS WHERE PO_US_ID = US_ID ORDER BY PO_ID DESC;
     QUERY;
 
     $query = $conn->prepare($script);
@@ -71,7 +71,7 @@ class UserPostRepository implements IPostRepository
 
     $script = <<<QUERY
       SELECT * FROM POSTS, USERS WHERE PO_US_ID = (SELECT US_ID FROM USERS WHERE US_USERNAME = :username)
-      AND US_ID = PO_US_ID;
+      AND US_ID = PO_US_ID ORDER BY PO_ID DESC;
     QUERY;
 
     $query = $conn->prepare($script);
