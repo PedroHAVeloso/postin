@@ -270,9 +270,9 @@ Foco muito no meu aprendizado, já que eu não tinha nenhum conhecimento em Reac
 
 Agradeço, desde já, à Unimar, pelo evento do Bootcamp. 
 
-Sem dúvidas, levou muita experiência nova, não apenas a mim, mas tabém para outras diversas pessoas.
+Sem dúvidas, levou muita experiência nova, não apenas a mim, mas também para outras diversas pessoas.
 
-Agradeço, também, a todos os mentores e professores do Bootcamp pelo apoio durante o desenvolvimento nas aulas. 
+Agradeço, também, a todos os mentores e professores do Bootcamp, pelo apoio durante o desenvolvimento nas aulas. 
 
 --- 
 
