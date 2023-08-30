@@ -25,13 +25,40 @@ Assim, todos poderão ver o que você escreveu, o que expressou.
 - [Como rodar o projeto.](#💡-como-rodar-o-projeto)
   - *Passo a passo para conseguir iniciar o projeto na sua máquina.*
 - [Como o projeto funciona?](#🤔-como-o-projeto-funciona)
-  - *Descrição e explicação do funcionamento completo do projeto.*
+  - *Descrição e explicação do funcionamento completo do projeto, com adendo de features existentes, acertos e erros que devem ser corrigidos.*
 - [Diário do desenvolvedor.](#✍️-diário-do-desenvolvedor)
   - *Diário com o dia a dia do desenvolvimento do projeto no Bootcamp.* 
+- [Imagens e prints do website.]()
+  - *Uma série de imagens e prints do site.*
 
 # 💡 Como rodar o projeto.
 
-O projeto (React) usa a API em PHP (também nesse repositório) para funcionar. Entretando você não precisa rodar a API, pois consegui hospedar ela. Apenas rodar o projeto em React te dará acesso a rede.
+O projeto em React usa uma API em PHP (também nesse repositório, `postin/api/*`) para funcionar. Entretando você não precisa rodar a API, pois consegui hospedar ela. Apenas rodar o projeto em React te dará acesso a rede social.
+
+Para conseguir rodar o projeto, você precisará ter em sua máquina:
+  
+  - [NodeJS v18.16.0](https://nodejs.org/en)
+
+### Passo a passo para rodar:
+
+1 - Clone o repositório na sua máquina.
+
+    $ git clone https://github.com/pedrohaveloso/postin.git
+
+2 - Entre na pasta clonada.
+
+    $ cd postin
+
+3 - Instale as dependências necessárias.
+
+    $ npm install
+
+4 - Inicie o projeto web.
+
+    $ npm run dev
+
+Pronto! O projeto estará rodando em sua máquina.
+Crie como uma conta para testar a rede, poste, favorite, faça tudo o que desejar. Logo as contas e posts criados serão apagados.
 
 # 🤔 Como o projeto funciona?
 
@@ -164,4 +191,21 @@ Foco muito no meu aprendizado, já que eu não tinha nenhum conhecimento em Reac
   Terminei as funções para cadastro e login de usuário, além das funções básicas envolvendo posts, como criar, favoritar, desfavoritar, obter todos etc.
 
   Já amanhã, pretendo continuar no React para aplicar essas funções (criar a comunicação com a API).
+</details>
+
+<details>
+  <summary><code>29/08/2023</code> - A rede funcional.</summary>
+
+  ## A rede funcional.
+  O dia hoje foi aproveitando tudo feito ontem, as funções na API, implementando a comunicação do front-end com ela.
+
+  Conseguir lançar a API de maneira gratuita, isso vai facilitar a continuação do projeto e o uso de outras pessoas, quem quiser testar poderá apenas clonar o projeto em React, rodar e pronto.
+
+  Hoje, terminei as features para criação de post, de conta, de login, para favoritar e desfavoritar posts, além de obter todos os posts e de apenas um usuário desejado. Tudo pronto e implementado no front-end.
+
+  Basta corrigir alguns erros e *feiuras* no quesito visual que sobraram após implementar essas features.
+
+  Também preciso implementar outras coisas que existem apenas de maneira visual: aparecer a quantidade de favoritos e posts de um usuário; salvar os posts que você favoritou, pois estão apenas sendo favoritados, sem salvar que foi você, entre outras coisas.
+
+  Fiquei muito feliz, pois hoje rendeu de maneira absurda, a rede já está "funcionando", ainda faltam muitos detalhes, mas acredito que vou entregar algo bem conclusivo até sexta-feira.
 </details>
