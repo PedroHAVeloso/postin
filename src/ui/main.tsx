@@ -6,8 +6,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+/** TailwindCSS. */
 import './main.css'
 
+/** Páginas utilizadas pela rede. */
 import HomePage from './pages/HomePage';
 import WelcomePage from './pages/WelcomePage';
 import MePage from './pages/MePage';
@@ -16,6 +18,7 @@ import ProfilePage from './pages/ProfilePage';
 import AuthProvider from '../presenter/providers/AuthProvider';
 import LogoffPage from './pages/LogoffPage';
 
+/** Rotas. */
 const router = createBrowserRouter([
   {
     path: "/",

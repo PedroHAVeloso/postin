@@ -47,8 +47,8 @@ export default function ProfilePage() {
           <Post
             id={1}
             color="#FFFFFF"
-            text="Olá, esse é um post fixado 😁, ele também tem, no máximo, 200 caracteres, o que achou? Vem pro Post in também! Uma rede social Unimar, dela para o mundo. Descubra novidades, expresse emoções."
-            favorites={21}
+            text="Olá, esse é um post fixado. Ele é uma breve descrição sobre seu perfil, ou, quem sabe, uma frase que te descreva bem. Essa função ainda será implementada nas próximas versões."
+            favorites={0}
             username={username}
           />
         </section>

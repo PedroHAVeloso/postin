@@ -26,10 +26,10 @@ Assim, todos poderão ver o que você escreveu, o que expressou.
   - *Passo a passo para conseguir iniciar o projeto na sua máquina.*
 - [Como o projeto funciona?](#🤔-como-o-projeto-funciona)
   - *Descrição e explicação do funcionamento completo do projeto, com adendo de features existentes, acertos e erros que devem ser corrigidos.*
+- [Como usar o website?](#🤯-como-usar-o-website)
+  - *Explicação de uso da rede social.*
 - [Diário do desenvolvedor.](#✍️-diário-do-desenvolvedor)
   - *Diário com o dia a dia do desenvolvimento do projeto no Bootcamp.* 
-- [Imagens e prints do website.]()
-  - *Uma série de imagens e prints do site.*
 
 # 💡 Como rodar o projeto.
 
@@ -63,6 +63,28 @@ Crie uma conta para testar a rede, poste, favorite, faça tudo o que desejar. Lo
 # 🤔 Como o projeto funciona?
 
 TODO
+
+# 🤯 Como usar o website?
+
+A rede social é simples e de fácil uso: crie uma conta, crie um post com o texto que quiser e sua cor favorita, cole no mural. Pronto, você está dentro do **Post** in.
+
+Mas que tal ver algumas prints com cada passo, para facilitar o entendimento?
+
+#### Crie uma conta na rede.
+
+<img src="prints/register.png" alt="Cadastro" height="400px"/>
+
+#### Poste a mensagem que desejar.
+
+<img src="prints/post.png" alt="Postando" height="400px"/>
+
+#### Curta posts e veja os perfis de quem quiser.
+
+<img src="prints/profile.png" alt="Perfil" height="400px"/>
+
+#### Pronto.
+
+Agora, você já aprendeu o básico da rede. Ela ainda possui outras funcionalidades, teste tudo que quiser.
 
 # ✍️ Diário do desenvolvedor.
 
