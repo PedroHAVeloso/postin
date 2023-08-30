@@ -33,7 +33,7 @@ Assim, todos poderão ver o que você escreveu, o que expressou.
 
 # 💡 Como rodar o projeto.
 
-O projeto em React usa uma API em PHP (também nesse repositório, `postin/api/*`) para funcionar. Entretando você não precisa rodar a API, pois consegui hospedar ela. Apenas rodar o projeto em React te dará acesso a rede social.
+O projeto em React usa uma API em PHP (também nesse repositório, `postin/api/*`) para funcionar. Entretando, você não precisa rodar a API, pois consegui hospedar ela de maneira gratuita. Apenas rodar o projeto em React te dará acesso a rede social.
 
 Para conseguir rodar o projeto, você precisará ter em sua máquina:
   
@@ -58,7 +58,7 @@ Para conseguir rodar o projeto, você precisará ter em sua máquina:
     $ npm run dev
 
 Pronto! O projeto estará rodando em sua máquina.
-Crie como uma conta para testar a rede, poste, favorite, faça tudo o que desejar. Logo as contas e posts criados serão apagados.
+Crie uma conta para testar a rede, poste, favorite, faça tudo o que desejar. Logo as contas e posts criados serão apagados.
 
 # 🤔 Como o projeto funciona?
 
