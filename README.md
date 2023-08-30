@@ -10,6 +10,20 @@
   <small>
     Desenvolvido por <a href="https://github.com/pedrohaveloso">PedroHAVeloso</a> 💙 durante o <a href="https://oficial.unimar.br/eventos/bootcamp-jovem-programador/">Bootcamp Jovem Programador 2023</a>. 
   </small>
+  <br />
+  <small>
+    <address>
+      E-mail: 
+      <a href="mailto:contatopedrohalves@gmail.com">
+        contatopedrohalves@gmail.com
+      </a>
+      <br />
+      WhatsApp:
+      <a href="tel:+5514981838507">
+        14 98183-8507
+      </a>
+    </address>
+  </small>
 </div>
 
 ---
@@ -20,7 +34,7 @@ Se baseia em papeis coloridos colados em um mural. Você cola seus posts — tex
 
 Assim, todos poderão ver o que você escreveu, o que expressou.
 
-# 🗒️ Sumário
+# 🗒️ Sumário.
 
 - [Como rodar o projeto.](#💡-como-rodar-o-projeto)
   - *Passo a passo para conseguir iniciar o projeto na sua máquina.*
@@ -30,6 +44,8 @@ Assim, todos poderão ver o que você escreveu, o que expressou.
   - *Explicação de uso da rede social.*
 - [Diário do desenvolvedor.](#✍️-diário-do-desenvolvedor)
   - *Diário com o dia a dia do desenvolvimento do projeto no Bootcamp.* 
+- [Agradecimentos.](#💙-agradecimentos)
+  - *Conclusão e agradecimentos.*
 
 # 💡 Como rodar o projeto.
 
@@ -65,14 +81,22 @@ Crie uma conta para testar a rede, poste, favorite, faça tudo o que desejar. Lo
 Antes de explicar o funcionamento do projeto, destaco as tecnologias utilizidas para o programar: `React` + `Vite` + `TS`, `TailwindCSS` (front-end), `PHP` (back-end).
 
 ### Como a API funciona?
-
 Antes de explicar a parte bonita e que os usuários conseguem ver, vou explicar a API usada pelo front-end.
 
 Primeiramente, destaco que criei o banco de dados usando MySQL. 
 
-Já a API,Criei ela usando PHP, não utilizei nenhuma biblioteca ou framework, apenas PHP puro e o Composer para autoload dos arquivos.
+Já a API, criei usando PHP, não utilizei nenhuma biblioteca ou framework, apenas PHP puro, além do Composer para autoload dos arquivos.
 
-O banco de dados foi construído em MySQL, a API se comunica com ele, limpando e formatando as informações 
+A API possui rotas criadas com as funções que existem atualmente no aplicativo (ainda faltam algumas features), ela acessa o banco de dados e fornece a informação desejada segundo a rota. Para mais detalhes sobre as rotas existentes atualmente, leia o README.md dela: [Post in API](/api/).
+
+Tentei aplicar alguns princípios de arquitetura limpa na API, como divisão em camadas e inversão de dependências, entretanto, alguns desvios ocorrem, devido ao pouco tempo de desenvolvimento.
+
+### Como o website funciona?
+O front-end do sistema, o website da rede social, foi criado usando, essencialmente, React com TypeScript. Ele se comunica com a API, filtra suas informações e as exibe na tela. 
+
+Tentei dividir da maneira mais limpa possível o código da aplicação, usando componentes etc., todavia, não possuo experiência anterior em React/TS, portanto, muita coisa deve estar incorreta. Mesmo assim, existe documentação dos componentes criados.
+
+Para estilização, optei por usar TailwindCSS, para facilitar/agilizar a programação do site — pelo curto tempo para desenvolver — e, ainda sim, não abdicar de um visual elegante, minimalista e agradável.
 
 # 🤯 Como usar o website?
 
@@ -241,3 +265,14 @@ Foco muito no meu aprendizado, já que eu não tinha nenhum conhecimento em Reac
 
   Fiquei muito feliz, pois hoje rendeu de maneira absurda, a rede já está "funcionando", ainda faltam muitos detalhes, mas acredito que vou entregar algo bem conclusivo até sexta-feira.
 </details>
+
+# 💙 Agradecimentos.
+
+Agradeço, desde já, à Unimar, pelo evento do Bootcamp. 
+
+Sem dúvidas, levou muita experiência nova, não apenas a mim, mas tabém para outras diversas pessoas.
+
+Agradeço, também, a todos os mentores e professores do Bootcamp pelo apoio durante o desenvolvimento nas aulas. 
+
+--- 
+
