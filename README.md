@@ -62,7 +62,17 @@ Crie uma conta para testar a rede, poste, favorite, faça tudo o que desejar. Lo
 
 # 🤔 Como o projeto funciona?
 
-TODO
+Antes de explicar o funcionamento do projeto, destaco as tecnologias utilizidas para o programar: `React` + `Vite` + `TS`, `TailwindCSS` (front-end), `PHP` (back-end).
+
+### Como a API funciona?
+
+Antes de explicar a parte bonita e que os usuários conseguem ver, vou explicar a API usada pelo front-end.
+
+Primeiramente, destaco que criei o banco de dados usando MySQL. 
+
+Já a API,Criei ela usando PHP, não utilizei nenhuma biblioteca ou framework, apenas PHP puro e o Composer para autoload dos arquivos.
+
+O banco de dados foi construído em MySQL, a API se comunica com ele, limpando e formatando as informações 
 
 # 🤯 Como usar o website?
 
@@ -70,19 +80,19 @@ A rede social é simples e de fácil uso: crie uma conta, crie um post com o tex
 
 Mas que tal ver algumas prints com cada passo, para facilitar o entendimento?
 
-#### Crie uma conta na rede.
+#### 1 - Crie uma conta na rede.
 
 <img src="prints/register.png" alt="Cadastro" height="400px"/>
 
-#### Poste a mensagem que desejar.
+#### 2 - Poste a mensagem que desejar.
 
 <img src="prints/post.png" alt="Postando" height="400px"/>
 
-#### Curta posts e veja os perfis de quem quiser.
+#### 3 - Curta posts e veja os perfis de quem quiser.
 
 <img src="prints/profile.png" alt="Perfil" height="400px"/>
 
-#### Pronto.
+#### 4 - Pronto.
 
 Agora, você já aprendeu o básico da rede. Ela ainda possui outras funcionalidades, teste tudo que quiser.
 
