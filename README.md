@@ -308,6 +308,8 @@ Foco muito no meu aprendizado, já que eu não tinha nenhum conhecimento em Reac
   Amanhã vou tentar fazer mais.
 </details>
 
+`31/08/2023` - O projeto foi enviado.
+
 # 💙 Agradecimentos.
 
 Agradeço, desde já, à Unimar, pelo evento do Bootcamp. 
