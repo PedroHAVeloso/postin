@@ -1,8 +1,8 @@
 import PostinSvg from "../svgs/PostinSvg";
 
 /**
- * Caso não haja comunicação com a API, essa 
- * página deve ser exibida.
+ * `Caso não haja comunicação com a API, essa 
+ * página deve ser exibida.`
  */
 export default function ApiErrorPage() {
   return <>

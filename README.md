@@ -1,12 +1,15 @@
+<!-- Título -->
 # **Post** in, uma rede *Unimar*. 💙
 
-<div align="center">
+<!-- Imagem de introdução. -->
+<picture align="center">
   <img src="public/desktop_back_logo.png" alt="Background" />
-</div>
+</picture>
 
 ---
 
-<div align="end">
+<!-- Informações e dados de contato. -->
+<article align="end">
   <small>
     Desenvolvido por <a href="https://github.com/pedrohaveloso">PedroHAVeloso</a> 💙 durante o <a href="https://oficial.unimar.br/eventos/bootcamp-jovem-programador/">Bootcamp Jovem Programador 2023</a>. 
   </small>
@@ -24,10 +27,11 @@
       </a>
     </address>
   </small>
-</div>
+</article>
 
 ---
 
+<!-- Descrição -->
 O **Post** in foi criado para a [*Unimar* (Universidade de Marília)](https://unimar.br/), uma rede interna e, ao desejável, externa, com o objetivo de ser simples de uso, agradável visualmente e atrativo aos públicos.
 
 Se baseia em papeis coloridos colados em um mural. Você cola seus posts — textos curtos e com fundos da cor que desejar — no mural da rede.
@@ -288,3 +292,26 @@ Sem dúvidas, levou muita experiência nova, não apenas a mim, mas também para
 
 Agradeço, também, a todos os mentores e professores do Bootcamp, pelo apoio durante o desenvolvimento nas aulas. 
 
+---
+
+<article align="end">
+  <small>
+    Desenvolvido por <a href="https://github.com/pedrohaveloso">PedroHAVeloso</a> 💙 durante o <a href="https://oficial.unimar.br/eventos/bootcamp-jovem-programador/">Bootcamp Jovem Programador 2023</a>. 
+  </small>
+  <br />
+  <small>
+    <address>
+      E-mail: 
+      <a href="mailto:contatopedrohalves@gmail.com">
+        contatopedrohalves@gmail.com
+      </a>
+      <br />
+      WhatsApp:
+      <a href="tel:+5514981838507">
+        14 98183-8507
+      </a>
+    </address>
+  </small>
+</article>
+
+---
