@@ -11,4 +11,23 @@ const apiUrls = {
   unfavorite: defaultUrl + 'post/unfavorite',
 }
 
-export default apiUrls; 
+export default apiUrls;
+
+/**
+ * Verifica a situação da API.
+ */
+export async function checkApi() {
+  try {
+    const fetchData = await fetch(apiUrls.default);
+
+    const status = fetchData.status;
+
+    if (status == 200) {
+      return true;
+    }
+
+    return false;
+  } catch (exc) {
+    return false;
+  }
+}

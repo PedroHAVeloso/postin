@@ -53,7 +53,7 @@ O projeto em React usa uma API em PHP (também nesse repositório, `postin/api/*
 
 Para conseguir rodar o projeto, você precisará ter em sua máquina:
   
-  - [NodeJS v18.16.0](https://nodejs.org/en)
+  - [NodeJS v18.16.0](https://nodejs.org/en) ou superior.
 
 ### Passo a passo para rodar:
 
@@ -270,7 +270,14 @@ Foco muito no meu aprendizado, já que eu não tinha nenhum conhecimento em Reac
   <summary><code>30/08/2023</code> - Mais documentação...</summary>
 
   ## Mais documentação...
-  TODO:
+  Hoje o dia foi apenas documentas, não tive tanto tempo para programar, então preferi apenas escrever documentação.
+  
+  Tudo nesse README.md, coloquei mais algumas coisas sobre o funcionamento da rede, agradecimentos etc.
+
+  Também pedi opinião da ideia do projeto para um dos mentores.
+  Apenas isso, foi um dia mais leve. 
+  
+  Amanhã vou tentar fazer mais.
 </details>
 
 # 💙 Agradecimentos.

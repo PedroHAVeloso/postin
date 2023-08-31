@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom"
 import Navbar from "../components/Navbar"
 import Post from "../components/Post"
 import PostWall from "../components/PostWall"
-import apiUrls from "../../data/datasources/api_urls";
+import apiUrls from "../../data/datasources/api";
 
 /**
  * `Tela de perfil de usuários.`

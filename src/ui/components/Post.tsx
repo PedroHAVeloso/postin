@@ -1,6 +1,6 @@
 import { useState } from "react";
 import HeartSvg from "../svgs/HeartSvg";
-import apiUrls from "../../data/datasources/api_urls";
+import apiUrls from "../../data/datasources/api";
 import PostPresenter from "../../presenter/post_presenter";
 
 type PostProps = {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PostinSvg from "../svgs/PostinSvg";
 import { useNavigate } from "react-router-dom";
-import apiUrls from "../../data/datasources/api_urls";
+import apiUrls from "../../data/datasources/api";
 import Cookies from "js-cookie";
 
 type NavbarProps = {

@@ -7,6 +7,9 @@ type AuthProviderProps = {
   children: React.ReactNode;
 }
 
+/**
+ * Verifica a validade da sessão do usuário.
+ */
 export default function AuthProvider({ noAuthRedirect, authNeed = true, children }: AuthProviderProps) {
   const auth = Cookies.get('auth-token');
 

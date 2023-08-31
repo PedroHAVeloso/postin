@@ -1,5 +1,5 @@
 import PostCreateModel from "../models/post_create_model";
-import apiUrls from "./api_urls";
+import apiUrls from "./api";
 
 export default class PostDatasource {
   public async create(post: PostCreateModel) {

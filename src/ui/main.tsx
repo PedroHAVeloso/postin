@@ -17,6 +17,8 @@ import ErrorPage from './pages/ErrorPage';
 import ProfilePage from './pages/ProfilePage';
 import AuthProvider from '../presenter/providers/AuthProvider';
 import LogoffPage from './pages/LogoffPage';
+import ApiProvider from '../presenter/providers/ApiProvider';
+import ApiErrorPage from './pages/ApiErrorPage';
 
 /** Rotas. */
 const router = createBrowserRouter([
@@ -61,7 +63,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ApiProvider onError={<ApiErrorPage />}>
+      <RouterProvider router={router} />
+    </ApiProvider>
   </React.StrictMode>,
 )
 

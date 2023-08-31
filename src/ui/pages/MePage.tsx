@@ -1,4 +1,4 @@
-import apiUrls from "../../data/datasources/api_urls";
+import apiUrls from "../../data/datasources/api";
 import Navbar from "../components/Navbar";
 import Post from "../components/Post";
 import PostWall from "../components/PostWall";

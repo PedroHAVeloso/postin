@@ -1,6 +1,6 @@
 import UserLoginModel from "../models/user_login_model";
 import UserRegisterModel from "../models/user_register_model";
-import apiUrls from "./api_urls";
+import apiUrls from "./api";
 
 export default class UserDatasource {
   public async login(user: UserLoginModel) {
