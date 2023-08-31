@@ -19,6 +19,7 @@ import AuthProvider from '../presenter/providers/AuthProvider';
 import LogoffPage from './pages/LogoffPage';
 import ApiProvider from '../presenter/providers/ApiProvider';
 import ApiErrorPage from './pages/ApiErrorPage';
+import ConfigPage from './pages/ConfigPage';
 
 /** Rotas. */
 const router = createBrowserRouter([
@@ -46,19 +47,26 @@ const router = createBrowserRouter([
       </AuthProvider>
   },
   {
-    path: "me",
+    path: "/me",
     element:
       <AuthProvider noAuthRedirect='/'>
         <MePage />
       </AuthProvider>
   },
   {
-    path: "profile/*",
+    path: "/profile/*",
     element:
       <AuthProvider noAuthRedirect='/'>
         <ProfilePage />
       </AuthProvider>
-  }
+  },
+  {
+    path: "/config",
+    element:
+      <AuthProvider noAuthRedirect='/'>
+        <ConfigPage />
+      </AuthProvider>
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

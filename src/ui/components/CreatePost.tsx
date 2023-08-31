@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
  * Sua posição é no canto direito inferior da tela.
  */
 export default function CreatePost() {
-  const [postColor, setPostColor] = useState("");
+  const [postColor, setPostColor] = useState("#FFFFFF");
   const [hiddenCreatePost, setHiddenCreatePost] = useState(false);
 
   const navigate = useNavigate();

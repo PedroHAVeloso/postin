@@ -91,6 +91,8 @@ Antes da explicação, essas são as funções que consegui implementar a tempo 
 - Visualizar o seu e o perfil de outras pessoas.
 
 #### Features pendentes:
+- Adicionar foto de usuário;
+- Limite de caracteres para os posts;
 - Salvar e contabilizar os seus posts favoritados;
 - Contar a quantidade de posts que cada usuário colou no mural;
 - Validação de dados de cadastro;
