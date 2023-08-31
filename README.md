@@ -18,12 +18,12 @@
     <address>
       E-mail: 
       <a href="mailto:contatopedrohalves@gmail.com">
-        contatopedrohalves@gmail.com
+        <em>contatopedrohalves@gmail.com</em>
       </a>
       <br />
       WhatsApp:
       <a href="tel:+5514981838507">
-        14 98183-8507
+        <em>14 98183-8507</em>
       </a>
     </address>
   </small>
@@ -294,6 +294,7 @@ Agradeço, também, a todos os mentores e professores do Bootcamp, pelo apoio du
 
 ---
 
+<!-- Informações e dados de contato. -->
 <div align="end">
   <small>
     Desenvolvido por <a href="https://github.com/pedrohaveloso">PedroHAVeloso</a> 💙 durante o <a href="https://oficial.unimar.br/eventos/bootcamp-jovem-programador/">Bootcamp Jovem Programador 2023</a>. 
@@ -303,12 +304,12 @@ Agradeço, também, a todos os mentores e professores do Bootcamp, pelo apoio du
     <address>
       E-mail: 
       <a href="mailto:contatopedrohalves@gmail.com">
-        contatopedrohalves@gmail.com
+        <em>contatopedrohalves@gmail.com</em>
       </a>
       <br />
       WhatsApp:
       <a href="tel:+5514981838507">
-        14 98183-8507
+        <em>14 98183-8507</em>
       </a>
     </address>
   </small>
