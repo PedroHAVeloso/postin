@@ -43,7 +43,7 @@ export default function Post(props: PostProps) {
       className={"p-[20px] rounded-[20px] flex flex-col gap-[10px] whitespace-pre-line " + props.className}
       style={{ backgroundColor: props.color }}
     >
-      <p>{props.text}</p>
+      <p className="break-words">{props.text}</p>
 
       <menu className="flex justify-between items-center">
         <li>

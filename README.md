@@ -266,6 +266,13 @@ Foco muito no meu aprendizado, já que eu não tinha nenhum conhecimento em Reac
   Fiquei muito feliz, pois hoje rendeu de maneira absurda, a rede já está "funcionando", ainda faltam muitos detalhes, mas acredito que vou entregar algo bem conclusivo até sexta-feira.
 </details>
 
+<details>
+  <summary><code>30/08/2023</code> - Mais documentação...</summary>
+
+  ## Mais documentação...
+  TODO:
+</details>
+
 # 💙 Agradecimentos.
 
 Agradeço, desde já, à Unimar, pelo evento do Bootcamp. 
