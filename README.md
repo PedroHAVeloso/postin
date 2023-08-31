@@ -11,7 +11,7 @@
 <!-- Informações e dados de contato. -->
 <div align="end">
   <small>
-    Desenvolvido por <a href="https://github.com/pedrohaveloso">PedroHAVeloso</a> 💙 durante o <a href="https://oficial.unimar.br/eventos/bootcamp-jovem-programador/">Bootcamp Jovem Programador 2023</a>. 
+    Desenvolvido por <a href="https://github.com/pedrohaveloso">pedrohaveloso</a> 💙 durante o <a href="https://oficial.unimar.br/eventos/bootcamp-jovem-programador/">Bootcamp Jovem Programador 2023</a>. 
   </small>
   <br />
   <small>
@@ -82,21 +82,37 @@ Crie uma conta para testar a rede, poste, favorite, faça tudo o que desejar. Lo
 
 # 🤔 Como o projeto funciona?
 
-Antes de explicar o funcionamento do projeto, destaco as tecnologias utilizidas para o programar: `React` + `Vite` + `TS`, `TailwindCSS` (front-end), `PHP` (back-end).
+Antes da explicação, essas são as funções que consegui implementar a tempo e estão `100% funcionais` e as funções que ainda não foram implementadas:
+
+#### Features atuais:
+- Cadastro e login de usuários;
+- Publicação de novos posts;
+- Favoritar posts;
+- Visualizar o seu e o perfil de outras pessoas.
+
+#### Features pendentes:
+- Salvar e contabilizar os seus posts favoritados;
+- Contar a quantidade de posts que cada usuário colou no mural;
+- Validação de dados de cadastro;
+- Suporte a negrito, itálico e links nos posts.
+
+Sobre as tecnologias utilizidas para desenvolver o projeto, são elas: 
+- `React` + `Vite` + `TS`, `TailwindCSS` (front-end);
+- `PHP`, `MySQL` (back-end).
 
 ### Como a API funciona?
-Antes de explicar a parte bonita e que os usuários conseguem ver, vou explicar a API usada pelo front-end.
-
-Primeiramente, destaco que criei o banco de dados usando MySQL. 
+Primeiramente, destaco que criei um banco de dados simples, utilizei MySQL para ele.
 
 Já a API, criei usando PHP, não utilizei nenhuma biblioteca ou framework, apenas PHP puro, além do Composer para autoload dos arquivos.
 
-A API possui rotas criadas com as funções que existem atualmente no aplicativo (ainda faltam algumas features), ela acessa o banco de dados e fornece a informação desejada segundo a rota. Para mais detalhes sobre as rotas existentes atualmente, leia o README.md dela: [Post in API](/api/).
+A API possui rotas criadas com as funções que existem atualmente no aplicativo (ainda faltam algumas features), ela acessa o banco de dados e fornece a informação desejada segundo a rota. Para mais detalhes sobre as rotas existentes atualmente, leia o README.md simples da API: [Post in API](/api/).
 
 Tentei aplicar alguns princípios de arquitetura limpa na API, como divisão em camadas e inversão de dependências, entretanto, alguns desvios ocorrem, devido ao pouco tempo de desenvolvimento.
 
+Ademais, consegui hospedar, de maneira gratuita, a API por um certo tempo. Assim, fica mais fácil de testá-la e utilizar o front-end em qualquer máquina.
+
 ### Como o website funciona?
-O front-end do sistema, o website da rede social, foi criado usando, essencialmente, React com TypeScript. Ele se comunica com a API, filtra suas informações e as exibe na tela. 
+O front-end, website da rede social, foi criado usando, essencialmente, React com TypeScript. Ele se comunica com a API, filtra suas informações e as exibe na tela. 
 
 Tentei dividir da maneira mais limpa possível o código da aplicação, usando componentes etc., todavia, não possuo experiência anterior em React/TS, portanto, muita coisa deve estar incorreta. Mesmo assim, existe documentação dos componentes criados.
 
@@ -110,13 +126,19 @@ Mas que tal ver algumas prints com cada passo, para facilitar o entendimento?
 
 #### 1 - Crie uma conta na rede.
 
+Use o nome que achar que melhor o represente, coloque seu e-mail e senha também.
+
 <img src="prints/register.png" alt="Cadastro" height="400px"/>
 
 #### 2 - Poste a mensagem que desejar.
 
+Ela deve ser curta, mas pode ter uma cor de fundo que dê destaque.
+
 <img src="prints/post.png" alt="Postando" height="400px"/>
 
 #### 3 - Curta posts e veja os perfis de quem quiser.
+
+Agora, você pode interagir com os outros.
 
 <img src="prints/profile.png" alt="Perfil" height="400px"/>
 
@@ -297,7 +319,7 @@ Agradeço, também, a todos os mentores e professores do Bootcamp, pelo apoio du
 <!-- Informações e dados de contato. -->
 <div align="end">
   <small>
-    Desenvolvido por <a href="https://github.com/pedrohaveloso">PedroHAVeloso</a> 💙 durante o <a href="https://oficial.unimar.br/eventos/bootcamp-jovem-programador/">Bootcamp Jovem Programador 2023</a>. 
+    Desenvolvido por <a href="https://github.com/pedrohaveloso">pedrohaveloso</a> 💙 durante o <a href="https://oficial.unimar.br/eventos/bootcamp-jovem-programador/">Bootcamp Jovem Programador 2023</a>. 
   </small>
   <br />
   <small>
