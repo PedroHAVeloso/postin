@@ -2,14 +2,14 @@
 # **Post** in, uma rede *Unimar*. 💙
 
 <!-- Imagem de introdução. -->
-<picture align="center">
+<div align="center">
   <img src="public/desktop_back_logo.png" alt="Background" />
-</picture>
+</div>
 
 ---
 
 <!-- Informações e dados de contato. -->
-<article align="end">
+<div align="end">
   <small>
     Desenvolvido por <a href="https://github.com/pedrohaveloso">PedroHAVeloso</a> 💙 durante o <a href="https://oficial.unimar.br/eventos/bootcamp-jovem-programador/">Bootcamp Jovem Programador 2023</a>. 
   </small>
@@ -27,7 +27,7 @@
       </a>
     </address>
   </small>
-</article>
+</div>
 
 ---
 
@@ -294,7 +294,7 @@ Agradeço, também, a todos os mentores e professores do Bootcamp, pelo apoio du
 
 ---
 
-<article align="end">
+<div align="end">
   <small>
     Desenvolvido por <a href="https://github.com/pedrohaveloso">PedroHAVeloso</a> 💙 durante o <a href="https://oficial.unimar.br/eventos/bootcamp-jovem-programador/">Bootcamp Jovem Programador 2023</a>. 
   </small>
@@ -312,6 +312,6 @@ Agradeço, também, a todos os mentores e professores do Bootcamp, pelo apoio du
       </a>
     </address>
   </small>
-</article>
+</div>
 
 ---
