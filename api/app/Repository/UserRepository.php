@@ -24,14 +24,12 @@ class UserRepository implements IPersonRepository
     $script = <<<QUERY
       SELECT * FROM USERS
         WHERE 
-        US_EMAIL = :email AND
-        US_PASSWORD = :password;
+        US_EMAIL = :email;
     QUERY;
 
     $query = $conn->prepare($script);
 
     $query->bindValue(':email', $user::$email);
-    $query->bindValue(':password', $user::$password);
 
     $query->execute();
 
@@ -42,6 +40,10 @@ class UserRepository implements IPersonRepository
     }
 
     $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    if (!password_verify($user::$password, $result[0]['US_PASSWORD'])) {
+      return false;
+    }
 
     $sessionRepo = new UserSessionRepository();
     $token = $sessionRepo->createSession($user::$email);
@@ -54,6 +56,8 @@ class UserRepository implements IPersonRepository
     $db = new PostinDatabase();
     $repo = new RepositoryController($db);
     $conn = $repo::connectDb();
+
+    $user::$password = password_hash($user::$password, PASSWORD_BCRYPT);
 
     $script = <<<QUERY
       INSERT INTO USERS (
