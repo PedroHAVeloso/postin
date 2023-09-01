@@ -37,6 +37,12 @@ export default function RegisterForm() {
 
   const formSubmit = async (event: React.MouseEvent) => {
     event.preventDefault();
+
+    if (email == "" || username == "" || password == "") {
+      onClickSetIsRegisterError(true);
+      return;
+    }
+
     const userPresenter = new UserPresenter();
     const register = await userPresenter.register(new UserRegisterModel(email, password, username));
 
