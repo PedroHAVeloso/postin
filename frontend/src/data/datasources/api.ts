@@ -1,5 +1,5 @@
-// const defaultUrl = 'https://www.pedrohaveloso.site/api/'
-const defaultUrl = 'http://localhost/api/'
+const defaultUrl = 'https://www.pedrohaveloso.site/api/'
+// const defaultUrl = 'http://localhost/api/'
 
 const apiUrls = {
   default: defaultUrl,
