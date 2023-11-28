@@ -1,6 +1,5 @@
 import GoogleSvg from "../svgs/GoogleSvg";
 import PostinSvg from "../svgs/PostinSvg";
-import UnimarSvg from "../svgs/UnimarSvg";
 import LoginForm from "../components/LoginForm";
 import Post from "../components/Post";
 import { useState } from "react";
@@ -26,10 +25,10 @@ export default function WelcomePage() {
         <Post
           id={1}
           color="#FFFFFF"
-          text={'Moderno, fácil, rápido: \n Post in, uma rede social Unimar. 💙'}
+          text={'Moderno, fácil, rápido: \n Post in, uma rede social institucional.'}
           favorites={3125}
           username="postin"
-          className="max-w-[350px] md:text-[1.1rem]"
+          className="max-w-[400px] md:text-[1.1rem]"
         />
       </section>
 
@@ -41,9 +40,6 @@ export default function WelcomePage() {
     </main>
 
     <footer className="h-[60px] mt-[20px] gap-[20px] flex hover:bg-gray-100 justify-center sm:justify-end p-[10px] items-center rounded-[20px] transition w-full bg-gray-50">
-      <a href="https://unimar.br/">
-        <UnimarSvg className="fill-gray-900 h-[25px]" />
-      </a>
       <a href="/" className="flex gap-[6px] items-center">
         <PostinSvg className="h-[30px] fill-gray-900 " />
         <h1 className="font-bold"><strong>Post</strong> in</h1>
