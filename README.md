@@ -22,8 +22,8 @@
       </a>
       <br />
       WhatsApp:
-      <a href="tel:+5514981838507">
-        <em>14 98183-8507</em>
+      <a href="tel:+5514920021247">
+        <em>14 92002-1247</em>
       </a>
     </address>
   </small>
@@ -334,8 +334,8 @@ Agradeço, também, a todos os mentores e professores do Bootcamp, pelo apoio du
       </a>
       <br />
       WhatsApp:
-      <a href="tel:+5514981838507">
-        <em>14 98183-8507</em>
+      <a href="tel:+5514920021247">
+        <em>14 92002-1247</em>
       </a>
     </address>
   </small>
